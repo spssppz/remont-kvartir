@@ -1,0 +1,136 @@
+.repair-cost {
+	padding: rem(50) rem(20);
+	@media (max-width: $tablet) {
+		padding: rem(40) rem(10);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(25) rem(10);
+	}
+	&__wrapper {
+		padding: rem(40) rem(0) rem(110);
+		background: #f9f9f9;
+		border-radius: rem(40);
+		margin: 0 auto;
+		max-width: rem(1920);
+		@media (max-width: $tablet) {
+			padding: rem(50) rem(0);
+			border-radius: rem(20);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(40) rem(0);
+		}
+		@media (max-width: $mobileSmall) {
+			padding: rem(25) rem(0);
+		}
+	}
+	&__container {
+	}
+	&__title {
+		max-width: rem(880);
+	}
+}
+
+.price-table {
+	&:not(:last-child) {
+		margin-bottom: rem(50);
+		@media (max-width: $tablet) {
+			margin-bottom: rem(40);
+		}
+		@media (max-width: $mobile) {
+			margin-bottom: rem(30);
+		}
+	}
+	&__title {
+		line-height: 1.1;
+		letter-spacing: -0.01em;
+		@media (min-width: $tablet) {
+			font-size: rem(22);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+	}
+	// Ниже $mobile таблица уезжает в горизонтальный скролл
+	@media (max-width: $mobile) {
+		overflow-x: auto;
+	}
+	table {
+		font-size: rem(16);
+		line-height: 1.1;
+		letter-spacing: -0.01em;
+		width: 100%;
+		border-collapse: separate;
+		border-spacing: 0;
+		@media (max-width: $mobile) {
+			min-width: rem(640);
+		}
+	}
+	th,
+	td {
+		text-align: left;
+		padding: rem(17) rem(20);
+		@media (max-width: $tablet) {
+			padding: rem(15);
+		}
+		&:first-child {
+			padding-left: rem(30);
+			@media (max-width: $tablet) {
+				padding-left: rem(20);
+			}
+		}
+		&:last-child {
+			padding-right: rem(30);
+			@media (max-width: $tablet) {
+				padding-right: rem(20);
+			}
+		}
+	}
+	th {
+		white-space: nowrap;
+		background: #f2f2f2;
+		font-size: rem(17);
+		font-weight: 500;
+		@media (max-width: $tablet) {
+			font-size: rem(16);
+		}
+		&:first-child {
+			border-radius: rem(12) rem(0) rem(0) rem(12);
+			width: 23%;
+		}
+		&:nth-child(2) {
+			width: 16%;
+		}
+		&:nth-child(3) {
+			width: 20%;
+		}
+		&:nth-child(4) {
+			width: 23%;
+		}
+		&:last-child {
+			border-radius: rem(0) rem(12) rem(12) rem(0);
+			width: 18%;
+		}
+	}
+	tbody {
+		td {
+			&:first-child {
+				font-weight: 500;
+			}
+		}
+		// border-radius на tr браузеры игнорируют,
+		// поэтому скругляем крайние ячейки, как у шапки
+		tr {
+			&:nth-child(even) {
+				td {
+					background: #fff;
+					&:first-child {
+						border-radius: rem(12) rem(0) rem(0) rem(12);
+					}
+					&:last-child {
+						border-radius: rem(0) rem(12) rem(12) rem(0);
+					}
+				}
+			}
+		}
+	}
+}

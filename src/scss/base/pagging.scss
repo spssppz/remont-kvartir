@@ -1,0 +1,25 @@
+.pagging {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&__arrow {
+	}
+	&__list {
+		display: flex;
+	}
+	&__item {
+	}
+	&__link {
+		font-weight: 700;
+		font-size: rem(15);
+		color: #3d3d3d;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		border: rem(2) solid #eaeaea;
+		&_active {
+			background: #f73313;
+			color: #fff;
+		}
+	}
+}

@@ -1,0 +1,246 @@
+.why-we {
+	padding: rem(50) rem(20);
+	@media (max-width: $tablet) {
+		padding: rem(40) rem(10);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(25) rem(10);
+	}
+	&__wrapper {
+		padding: rem(70) rem(0);
+		background: #f9f9f9;
+		border-radius: rem(40);
+		margin: 0 auto;
+		max-width: rem(1920);
+		@media (max-width: $tablet) {
+			padding: rem(50) rem(0);
+			border-radius: rem(20);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(40) rem(0);
+		}
+		@media (max-width: $mobileSmall) {
+			padding: rem(25) rem(0);
+		}
+	}
+	&__container {
+	}
+	&__title {
+		&:not(:last-child) {
+			@media (min-width: $tablet) {
+				margin-bottom: rem(52);
+			}
+		}
+	}
+	&__cols {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-auto-rows: rem(263);
+		gap: rem(20);
+		@media (max-width: $pc) {
+			gap: rem(15);
+		}
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr 1fr;
+			grid-auto-rows: rem(280);
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+			grid-auto-rows: rem(260);
+		}
+	}
+	&__col {
+		&_row-2 {
+			@media (min-width: $tablet) {
+				grid-row: span 2;
+			}
+		}
+		&_col-2 {
+			@media (min-width: $tablet) {
+				grid-column: span 2;
+			}
+		}
+	}
+}
+
+.advantage {
+	position: relative;
+	overflow: hidden;
+	border-radius: rem(26);
+	padding: rem(25);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	letter-spacing: -0.01em;
+	@media (max-width: $pc) {
+		padding: rem(20);
+	}
+	@media (max-width: $tablet) {
+		border-radius: rem(20);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(20) rem(15);
+	}
+	&_light {
+		background: #fff;
+	}
+	&_accent {
+		background: #ffda55;
+	}
+	&_photo {
+		color: #fff;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 60%);
+		}
+	}
+	&_top {
+		justify-content: flex-start;
+		&::after {
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 60%);
+		}
+	}
+	&_center {
+		justify-content: center;
+		text-align: center;
+		&::after {
+			background: rgba(0, 0, 0, 0.35);
+		}
+	}
+	&_dark {
+		color: #000;
+		&::after {
+			display: none;
+		}
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__decor {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: auto;
+		img {
+			width: 100%;
+			height: auto;
+		}
+		&_side {
+			top: auto;
+			left: auto;
+			right: percent(35, 640);
+			bottom: 0;
+			width: percent(394, 640);
+			aspect-ratio: 394/273;
+			@media (max-width: $pc) {
+				right: 0;
+			}
+			@media (max-width: $tablet) {
+				width: percent(394, 500);
+			}
+			@media (max-width: $mobileSmall) {
+				width: percent(394, 420);
+			}
+		}
+	}
+	&__watermark {
+		font-family: $second-family;
+		font-weight: 600;
+		font-size: rem(240);
+		letter-spacing: -0.05em;
+		color: rgba(255, 255, 255, 0.2);
+		position: absolute;
+		bottom: rem(-20);
+		right: rem(-24);
+	}
+	&__watermark-icon {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		height: auto;
+		opacity: 0.02;
+		img {
+			width: 100%;
+			height: auto;
+		}
+		.advantage_accent & {
+			right: percent(-37, 310);
+			width: percent(226, 310);
+			aspect-ratio: 226/204;
+			filter: brightness(0) invert(1);
+			opacity: 0.1;
+		}
+		.advantage_light & {
+			right: percent(40, 310);
+			width: percent(189, 310);
+			aspect-ratio: 1;
+		}
+	}
+	&__icon {
+		position: relative;
+		z-index: 2;
+		flex: 0 0 rem(52);
+		width: rem(52);
+		aspect-ratio: 1;
+		margin-bottom: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: rem(16);
+		@media (max-width: $mobile) {
+			flex: 0 0 rem(46);
+			width: rem(46);
+			border-radius: rem(14);
+		}
+		.advantage_light & {
+			background: #ffda55;
+		}
+		.advantage_accent & {
+			background: #fff;
+		}
+	}
+	&__body {
+		position: relative;
+		z-index: 2;
+		@media (min-width: $mobile) {
+			max-width: rem(265);
+		}
+	}
+	&__label {
+		font-weight: 500;
+		font-size: rem(20);
+		line-height: 1.2;
+		@media (max-width: $mobile) {
+			font-size: rem(18);
+		}
+		sup {
+			font-size: rem(13);
+			vertical-align: super;
+			line-height: 0;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(10);
+		}
+	}
+	&__text {
+		font-size: rem(16);
+		line-height: 1.375;
+		@media (max-width: $mobile) {
+			font-size: rem(15);
+		}
+		.advantage_light & {
+			color: #777889;
+		}
+	}
+}

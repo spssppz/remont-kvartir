@@ -1,0 +1,52 @@
+{
+	"name": "gulp_start",
+	"version": "2.0",
+	"description": "Hard Work Pays Off",
+	"main": "gulpfile.js",
+	"type": "module",
+	"scripts": {
+		"dev": "gulp",
+		"build": "gulp build --build",
+		"zip": "gulp deployZIP --build",
+		"ftp": "gulp deployFTP --build"
+	},
+	"author": "spsspp",
+	"license": "ISC",
+	"dependencies": {
+		"swiper": "latest"
+	},
+	"devDependencies": {
+		"browser-sync": "latest",
+		"del": "latest",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "latest",
+		"gulp-clean-css": "latest",
+		"gulp-cli": "latest",
+		"gulp-file-include": "latest",
+		"gulp-fonter-fix": "latest",
+		"gulp-format-html": "latest",
+		"gulp-group-css-media-queries": "latest",
+		"gulp-if": "latest",
+		"gulp-imagemin": "latest",
+		"gulp-newer": "latest",
+		"gulp-notify": "latest",
+		"gulp-plumber": "latest",
+		"gulp-rename": "latest",
+		"gulp-replace": "latest",
+		"gulp-sass": "latest",
+		"gulp-ttf2woff2": "latest",
+		"gulp-typograf": "latest",
+		"gulp-util": "latest",
+		"gulp-version-number": "latest",
+		"gulp-webp": "latest",
+		"gulp-webp-html-nosvg": "latest",
+		"gulp-webpcss": "latest",
+		"gulp-zip": "latest",
+		"sass": "latest",
+		"vinyl-ftp": "latest",
+		"webp-converter": "2.2.3",
+		"webpack": "latest",
+		"webpack-stream": "latest",
+		"gulp-htmlmin": "latest"
+	}
+}

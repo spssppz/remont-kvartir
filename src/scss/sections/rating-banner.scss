@@ -1,0 +1,81 @@
+.rating-banner {
+	padding: rem(38) rem(0);
+	color: #fff;
+	letter-spacing: -0.01em;
+	@media (max-width: $tablet) {
+		padding: rem(30) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(25) rem(0);
+	}
+	&__container {
+	}
+	&__wrapper {
+		position: relative;
+		border-radius: rem(30);
+		padding: rem(45) rem(40);
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		@media (min-width: $tablet) {
+			min-height: rem(294);
+		}
+		@media (max-width: $tablet) {
+			padding: rem(40) rem(30);
+			border-radius: rem(20);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(40) rem(20);
+		}
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 20% center;
+		@media (max-width: $mobile) {
+			object-position: 15% center;
+		}
+	}
+	&__title {
+		font-weight: 500;
+		font-size: rem(36);
+		position: relative;
+		z-index: 2;
+		max-width: rem(240);
+		&:not(:last-child) {
+			margin-bottom: rem(12);
+		}
+	}
+	&__descr {
+		line-height: 1.25;
+		font-size: rem(19);
+		position: relative;
+		z-index: 2;
+		max-width: rem(240);
+	}
+	&__decor {
+		position: absolute;
+		background: url("@img/rating-banner/decor-1.png") 50% / 100% no-repeat;
+		&_1 {
+			top: 0;
+			left: rem(78);
+			aspect-ratio: 180/93;
+			width: rem(180);
+		}
+		&_2 {
+			bottom: 0;
+			left: rem(290);
+			aspect-ratio: 203/219;
+			width: rem(203);
+			background-image: url("@img/rating-banner/decor-2.png");
+			@media (max-width: $mobile) {
+				left: rem(240);
+			}
+		}
+	}
+}

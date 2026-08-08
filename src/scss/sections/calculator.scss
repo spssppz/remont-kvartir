@@ -1,0 +1,209 @@
+.calc {
+	padding: rem(50) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(40) rem(10);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(25) rem(10);
+	}
+	&__wrapper {
+		position: relative;
+		border-radius: rem(40);
+		overflow: hidden;
+		max-width: rem(1500);
+		margin: 0 auto;
+		padding: rem(55) rem(0);
+		display: flex;
+		align-items: flex-end;
+		@media (min-width: $tablet) {
+			min-height: rem(805);
+		}
+		@media (max-width: $tablet) {
+			border-radius: rem(20);
+			padding: rem(40) rem(0);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(25) rem(0);
+		}
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__container {
+		position: relative;
+		display: flex;
+		gap: rem(15);
+		// Ниже планшета калькулятор и форма встают друг под друга
+		@media (max-width: $tablet) {
+			width: 100%;
+			flex-direction: column;
+		}
+	}
+}
+
+.calc-cost {
+	background: #fff;
+	border-radius: rem(30);
+	padding: rem(45) rem(50);
+	flex: auto;
+	@media (max-width: $pc) {
+		padding: rem(35) rem(30);
+	}
+	@media (max-width: $tablet) {
+		border-radius: rem(20);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(25) rem(20);
+	}
+	@media (max-width: $mobileSmall) {
+		padding: rem(20) rem(15);
+	}
+	&__title {
+		font-size: rem(32);
+		letter-spacing: -0.01em;
+		@media (max-width: $tablet) {
+			font-size: rem(28);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(24);
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: rem(22);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(40);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(30);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(25);
+			}
+		}
+	}
+	&__cols {
+		display: flex;
+		gap: rem(45);
+		@media (max-width: $pc) {
+			gap: rem(25);
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (max-width: $tablet) {
+			display: flex;
+		}
+		@media (max-width: $mobile) {
+			flex-wrap: wrap;
+			gap: rem(20);
+		}
+	}
+	&__col {
+		flex: auto;
+		// Ниже $mobile — в две колонки, на самых узких — в одну
+		@media (max-width: $mobile) {
+			flex: 0 0 calc((100% - rem(20)) / 2);
+		}
+		@media (max-width: $mobileSmall) {
+			flex: 1 1 100%;
+		}
+	}
+	&__cap {
+		font-weight: 600;
+		font-size: rem(17);
+		letter-spacing: -0.01em;
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+		}
+	}
+	&__checkbox {
+		display: flex;
+		flex-direction: column;
+		gap: rem(10);
+	}
+	&__input {
+		height: rem(59);
+	}
+}
+
+.calc-form {
+	flex: 0 0 rem(386);
+	padding: rem(45) rem(40);
+	background: #fff;
+	border-radius: rem(30);
+	display: flex;
+	flex-direction: column;
+	@media (max-width: $pc) {
+		flex: 0 0 rem(340);
+		padding: rem(35) rem(30);
+	}
+	@media (max-width: $tablet) {
+		flex: 1 1 auto;
+		border-radius: rem(20);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(25) rem(20);
+	}
+	@media (max-width: $mobileSmall) {
+		padding: rem(20) rem(15);
+	}
+	&__title {
+		font-family: $second-family;
+		font-size: rem(17);
+		line-height: 1.3;
+		letter-spacing: -0.01em;
+		padding-left: rem(140);
+		position: relative;
+		@media (max-width: $mobile) {
+			padding-left: rem(100);
+		}
+		span {
+			font-weight: 600;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			left: rem(-20);
+			bottom: rem(-20);
+			width: rem(186);
+			aspect-ratio: 186/142;
+			background: url("@img/calc/calc-decor.png") 50% / 100% no-repeat;
+			@media (max-width: $tablet) {
+				width: rem(140);
+			}
+			@media (max-width: $mobile) {
+				left: rem(-15);
+				bottom: rem(-15);
+				width: rem(135);
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+	}
+	&__input {
+		&:not(:last-child) {
+			margin-bottom: rem(8);
+		}
+	}
+	&__btn {
+		font-size: rem(17);
+		min-height: rem(77);
+		@media (max-width: $tablet) {
+			min-height: rem(66);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(16);
+			min-height: rem(58);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(15);
+			}
+		}
+	}
+}

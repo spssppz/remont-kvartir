@@ -1,0 +1,58 @@
+// <RATING>
+// Снипет (HTML): rating
+.rating {
+	display: flex;
+	align-items: flex-end;
+	font-size: rem(40);
+	line-height: 0.75;
+	transition: opacity 0.3s ease 0s;
+	&.rating_sending {
+		opacity: 0.2;
+	}
+	&.rating_set .rating__active,
+	&.rating_set .rating__item {
+		cursor: pointer;
+	}
+	&__body {
+		position: relative;
+		&::before {
+			content: "★★★★★";
+			display: block;
+		}
+	}
+	&__active {
+		position: absolute;
+		width: 0%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		&::before {
+			content: "★★★★★";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			color: #ffd300;
+		}
+	}
+	&__items {
+		display: flex;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	&__item {
+		flex: 0 0 20%;
+		height: 100%;
+		opacity: 0;
+	}
+	&__value {
+		font-size: 50%;
+		line-height: 1;
+		padding-left: rem(10);
+	}
+}

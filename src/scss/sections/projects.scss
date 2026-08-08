@@ -1,0 +1,118 @@
+.projects {
+	padding: rem(50) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(40) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(25) rem(0);
+	}
+	&__container {
+	}
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(15);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(15);
+			}
+		}
+	}
+	&__subtitle {
+		&:not(:last-child) {
+			margin-bottom: rem(30);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(20);
+			}
+		}
+	}
+	&__tabs {
+	}
+	&__navigation {
+	}
+	&__button {
+	}
+	&__content {
+	}
+	&__body {
+	}
+	&__cols {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: rem(20);
+		@media (max-width: $tablet) {
+			gap: rem(15) rem(20);
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+		}
+	}
+}
+
+.project {
+	border-radius: rem(26);
+	overflow: hidden;
+	aspect-ratio: 1;
+	position: relative;
+	padding: rem(25);
+	display: flex;
+	align-items: flex-end;
+	@media (max-width: $pc) {
+		padding: rem(20);
+	}
+	@media (max-width: $tablet) {
+		border-radius: rem(20);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(15);
+	}
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__link {
+		background: #fff;
+		padding: rem(12) rem(12) rem(12) rem(25);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+		width: 100%;
+		font-weight: 500;
+		font-size: rem(17);
+		line-height: 1.25;
+		letter-spacing: -0.01em;
+		border-radius: rem(18);
+		@media (max-width: $tablet) {
+			border-radius: rem(15);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(16);
+			padding: rem(10) rem(10) rem(10) rem(20);
+		}
+		span {
+			&:last-child {
+				flex: 0 0 rem(42);
+				width: rem(42);
+				aspect-ratio: 1;
+				background: #ffda55;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: rem(12);
+
+				svg {
+					path {
+						stroke: currentColor;
+					}
+				}
+			}
+		}
+	}
+}

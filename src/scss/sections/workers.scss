@@ -1,0 +1,129 @@
+.workers {
+	padding: rem(50) rem(0);
+	overflow: hidden;
+	@media (max-width: $tablet) {
+		padding: rem(40) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(25) rem(0);
+	}
+	&__container {
+	}
+	&__title {
+	}
+	&__tabs {
+	}
+	&__navigation {
+	}
+	&__button {
+	}
+	&__content {
+	}
+	&__body {
+	}
+	&__slider {
+		overflow: visible;
+		&:not(:last-child) {
+			margin-bottom: rem(52);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(40);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(32);
+			}
+		}
+	}
+	&__wrapper {
+	}
+	&__pagination {
+	}
+	&__slider-nav {
+	}
+	&__slider-btn {
+		&_prev {
+		}
+		&_next {
+		}
+	}
+}
+
+.worker {
+	background: #f9f9f9;
+	border-radius: rem(26);
+	padding: rem(25);
+	display: flex;
+	flex-direction: column;
+	flex: 0 0 calc((100% - rem(20 * (3 - 1))) / 3);
+	@media (max-width: $tablet) {
+		flex: 0 0 calc((100% - rem(15 * (2 - 1))) / 2);
+		padding: rem(20);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(15);
+		flex: 0 0 100%;
+	}
+	&:not(:last-child) {
+		margin-right: rem(20);
+		@media (max-width: $tablet) {
+			margin-right: rem(15);
+		}
+	}
+	&__image {
+		position: relative;
+		border-radius: rem(20);
+		overflow: hidden;
+		aspect-ratio: 370/235;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+	}
+	&__exp {
+		position: absolute;
+		font-size: rem(14);
+		line-height: 1.05;
+		letter-spacing: -0.01em;
+		color: #fff;
+		backdrop-filter: blur(rem(10));
+		padding: rem(8) rem(12);
+		background: rgba(255, 255, 255, 0.3);
+		border-radius: rem(100);
+		bottom: rem(16);
+		left: rem(16);
+	}
+	&__text {
+		flex: auto;
+		font-size: rem(17);
+		line-height: 1.4;
+		letter-spacing: -0.01em;
+		@media (max-width: $mobile) {
+			font-size: rem(16);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+	}
+	&__bottom {
+		letter-spacing: -0.01em;
+		padding-top: rem(25);
+		border-top: rem(1) solid #efefef;
+	}
+	&__name {
+		font-weight: 500;
+		font-size: rem(18);
+		&:not(:last-child) {
+			margin-bottom: rem(7);
+		}
+	}
+	&__pos {
+		font-size: rem(16);
+		line-height: 1.2;
+	}
+}

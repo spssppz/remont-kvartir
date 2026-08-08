@@ -1,0 +1,313 @@
+.hero {
+	padding: rem(0) rem(20);
+	@media (max-width: $tablet) {
+		padding: rem(0) rem(10);
+	}
+	&__wrapper {
+		position: relative;
+		border-radius: rem(40);
+		overflow: hidden;
+		margin: 0 auto;
+		max-width: rem(1920);
+		padding: rem(48) rem(0) rem(54);
+		@media (min-width: $tablet) {
+			min-height: rem(781);
+		}
+		@media (max-width: $tablet) {
+			border-radius: rem(20);
+			padding: rem(40) rem(0);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(30) rem(0);
+		}
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		filter: brightness(0.8);
+		@media (max-width: $mobile) {
+			object-position: 65% center;
+		}
+	}
+	&__container {
+		position: relative;
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		gap: rem(30);
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			align-items: stretch;
+			gap: rem(25);
+		}
+	}
+	&__body {
+		@media (min-width: $tablet) {
+			flex: 1 1 auto;
+		}
+	}
+	&__objects {
+		position: relative;
+		z-index: 2;
+		&:not(:last-child) {
+			margin-bottom: rem(-48);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(-32);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(-18);
+			}
+		}
+	}
+	&__title {
+		font-weight: 500;
+		font-size: rem(120);
+		line-height: 0.79;
+		letter-spacing: -0.01em;
+		color: #fff;
+		mix-blend-mode: soft-light;
+		max-width: rem(915);
+		@media (max-width: $pc) {
+			font-size: rem(100);
+		}
+		@media (max-width: $tablet) {
+			font-size: rem(76);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(52);
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: rem(42);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(67);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(45);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(25);
+			}
+		}
+	}
+	&__subtitle {
+		font-weight: 500;
+		font-size: rem(52);
+		line-height: 0.96;
+		letter-spacing: -0.01em;
+		color: #fff;
+		max-width: rem(832);
+		@media (max-width: $tablet) {
+			font-size: rem(38);
+			line-height: 1.05;
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(28);
+			line-height: 1.15;
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: rem(24);
+		}
+		sup {
+			font-size: rem(22);
+			vertical-align: super;
+			line-height: 0;
+			@media (max-width: $mobile) {
+				font-size: rem(14);
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(15);
+			}
+		}
+	}
+	&__descr {
+		font-size: rem(18);
+		line-height: 1.3;
+		letter-spacing: -0.01em;
+		color: #fff;
+		max-width: rem(832);
+		@media (max-width: $mobile) {
+			font-size: rem(16);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(35);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(28);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(20);
+			}
+		}
+	}
+	&__btn {
+		gap: rem(10);
+		padding: rem(14) rem(14) rem(14) rem(30);
+		font-size: rem(17);
+		border-radius: rem(22);
+		@media (max-width: $mobile) {
+			padding: rem(10) rem(10) rem(10) rem(24);
+			border-radius: rem(18);
+			font-size: rem(16);
+		}
+		span {
+			&:last-child {
+				flex: 0 0 rem(46);
+				width: rem(46);
+				aspect-ratio: 1;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: rem(14);
+				background: #000;
+				color: #fff;
+				@media (max-width: $mobile) {
+					flex: 0 0 rem(38);
+					width: rem(38);
+					border-radius: rem(12);
+				}
+				svg {
+					path {
+						stroke: #ffda55;
+					}
+				}
+			}
+		}
+	}
+	&__guarantee {
+		@media (min-width: $tablet) {
+			flex: 0 0 rem(221);
+		}
+	}
+}
+
+.objects {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: rem(15);
+	@media (max-width: $mobile) {
+		gap: rem(10);
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+	}
+	&__item {
+		flex: 0 0 rem(48);
+		width: rem(48);
+		aspect-ratio: 1;
+		border-radius: rem(16);
+		overflow: hidden;
+		border: rem(2) solid rgba(255, 255, 255, 0.4);
+		@media (max-width: $mobileSmall) {
+			flex: 0 0 rem(42);
+			width: rem(42);
+			border-radius: rem(14);
+		}
+		&:not(:first-child) {
+			margin-left: rem(-10);
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__info {
+		display: flex;
+		align-items: flex-start;
+		gap: rem(7);
+		letter-spacing: -0.01em;
+		color: #fff;
+	}
+	&__count {
+		font-weight: 500;
+		font-size: rem(42);
+		line-height: 1;
+		white-space: nowrap;
+		@media (max-width: $tablet) {
+			font-size: rem(36);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(30);
+		}
+	}
+	&__descr {
+		font-size: rem(15);
+		line-height: 1.25;
+		max-width: rem(133);
+		@media (max-width: $mobile) {
+			font-size: rem(14);
+		}
+	}
+}
+
+.guarantee {
+	background: #fff;
+	border-radius: rem(24);
+	padding: rem(21) rem(20) rem(20);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	@media (max-width: $tablet) {
+		border-radius: rem(20);
+		flex-direction: row;
+		align-items: center;
+		gap: rem(15);
+		padding: rem(15);
+		max-width: rem(500);
+	}
+	&__text {
+		font-size: rem(16);
+		line-height: 1.3;
+		letter-spacing: -0.01em;
+		@media (max-width: $tablet) {
+			flex: 1 1 auto;
+			padding-bottom: rem(15);
+		}
+		span {
+			font-weight: 600;
+		}
+		sup {
+			font-size: rem(11);
+			vertical-align: super;
+			line-height: 0;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(18);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(0);
+			}
+		}
+	}
+	&__image {
+		position: relative;
+		background: #f2f2f2;
+		border-radius: rem(16);
+		aspect-ratio: 181/187;
+		@media (max-width: $tablet) {
+			flex: 0 0 rem(130);
+			width: rem(130);
+			border-radius: rem(16) rem(16) rem(0) rem(0);
+			align-self: flex-end;
+		}
+		img {
+			position: absolute;
+			left: 50%;
+			bottom: rem(-20);
+			transform: translateX(-50%);
+			width: percent(190, 181);
+			height: auto;
+			max-width: none;
+			@media (max-width: $tablet) {
+				bottom: 0;
+			}
+		}
+	}
+}

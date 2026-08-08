@@ -1,0 +1,233 @@
+.get-estimate {
+	padding: rem(60) rem(20);
+	@media (max-width: $tablet) {
+		padding: rem(40) rem(10);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(25) rem(10);
+	}
+	&__wrapper {
+		padding: rem(0) rem(20);
+		border-radius: rem(40);
+		margin: 0 auto;
+		max-width: rem(1500);
+		position: relative;
+		display: flex;
+		@media (min-width: $tablet) {
+			min-height: rem(660);
+		}
+		// Ниже планшета высоту задаёт контент, поэтому появляются
+		// вертикальные паддинги вместо padding-top у контента и отступа у формы
+		@media (max-width: $tablet) {
+			padding: rem(40) rem(20);
+			border-radius: rem(20);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(30) rem(15);
+		}
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: rem(40);
+		@media (max-width: $tablet) {
+			border-radius: rem(20);
+		}
+	}
+	&__container {
+		display: flex;
+	}
+	&__body {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		justify-content: space-between;
+		gap: rem(45);
+		// 992-1300: три колонки уже не помещаются (контейнер ~940-1190),
+		// поэтому контент уходит в отдельный ряд, а девушка с формой встают под ним
+		@media (max-width: $pc) {
+			flex-wrap: wrap;
+			align-items: flex-end;
+			gap: rem(30);
+		}
+		@media (max-width: $tablet) {
+			width: 100%;
+			flex-wrap: nowrap;
+			align-items: center;
+		}
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			align-items: stretch;
+			gap: rem(25);
+		}
+	}
+	&__content {
+		color: #fff;
+		flex: 0 0 percent(410, 1300);
+		padding-top: rem(70);
+		@media (max-width: $pc) {
+			flex: 1 1 100%;
+			padding-top: rem(50);
+		}
+		@media (max-width: $tablet) {
+			flex: 1 1 auto;
+			padding-top: rem(0);
+		}
+	}
+	&__title {
+		text-align: left;
+		margin: 0;
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(20);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(20);
+			}
+		}
+	}
+	&__descr {
+		letter-spacing: -0.01em;
+		max-width: rem(295);
+		line-height: math.div(52, 40);
+		@media (max-width: $mobile) {
+			font-size: rem(16);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(15);
+			}
+		}
+	}
+	&__image {
+		width: rem(253);
+		@media (max-width: $mobile) {
+			width: rem(200);
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	// Декоративное фото — держится на отрицательных отступах и нахлёсте,
+	// ниже планшета места под него нет
+	&__decor {
+		flex: 0 0 percent(533, 1300);
+		margin-top: rem(-25);
+		position: relative;
+		margin-left: -15%;
+		// Во втором ряду нахлёст на контент больше не нужен — обнуляем сдвиги
+		@media (max-width: $pc) {
+			flex: 0 0 rem(380);
+			margin-top: rem(0);
+			margin-left: rem(0);
+		}
+		@media (max-width: $tablet) {
+			display: none;
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__decor-descr {
+		position: absolute;
+		right: percent(50, 533);
+		bottom: percent(60, 686);
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		span {
+			font-size: rem(16);
+			letter-spacing: -0.01em;
+			padding: rem(10) rem(12);
+			border-radius: rem(12);
+			&:first-child {
+				background: #363636;
+				color: #fff;
+				font-weight: 600;
+			}
+			&:last-child {
+				background: #ffda55;
+			}
+		}
+	}
+}
+
+.callback-form {
+	background: #fff;
+	padding: rem(30) rem(40) rem(40);
+	border-radius: rem(30);
+	display: flex;
+	flex-direction: column;
+	align-self: flex-end;
+	flex: 0 0 rem(388);
+	margin-bottom: rem(60);
+	@media (max-width: $pc) {
+		flex: 0 0 rem(360);
+	}
+	@media (max-width: $tablet) {
+		flex: 0 0 rem(350);
+		align-self: center;
+		margin-bottom: rem(0);
+		padding: rem(25) rem(25) rem(30);
+		border-radius: rem(24);
+	}
+	@media (max-width: $mobile) {
+		flex: 1 1 auto;
+		width: 100%;
+		max-width: rem(450);
+		margin: 0 auto;
+		padding: rem(20) rem(15) rem(25);
+		border-radius: rem(20);
+	}
+	&__label {
+		font-family: $second-family;
+		font-size: rem(26);
+		line-height: 1.1;
+		text-align: center;
+		letter-spacing: -0.01em;
+		@media (max-width: $tablet) {
+			font-size: rem(24);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(22);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(25);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(20);
+			}
+		}
+	}
+	&__input {
+		&:not(:last-child) {
+			margin-bottom: rem(8);
+		}
+	}
+	&__btn {
+		font-size: rem(17);
+		min-height: rem(77);
+		@media (max-width: $tablet) {
+			min-height: rem(66);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(16);
+			min-height: rem(58);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(15);
+			}
+		}
+	}
+	&__checkbox {
+	}
+}

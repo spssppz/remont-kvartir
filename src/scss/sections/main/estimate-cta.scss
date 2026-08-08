@@ -1,0 +1,110 @@
+.estimate-cta {
+	padding: rem(30) rem(0) rem(45);
+	@media (max-width: $tablet) {
+		padding: rem(40) rem(0) rem(80);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(25) rem(0) rem(50);
+	}
+	&__container {
+	}
+	&__body {
+		border-radius: rem(30);
+		overflow: hidden;
+		position: relative;
+		padding: rem(0) rem(60);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: rem(20);
+		@media (max-width: $pc) {
+			padding: rem(0) rem(32);
+		}
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			padding: rem(20) rem(32) rem(0);
+			gap: rem(15);
+		}
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__content {
+		position: relative;
+		color: #fff;
+		letter-spacing: -0.01em;
+		@media (min-width: $tablet) {
+			flex: 0 0 percent(378, 1180);
+			padding: rem(20) rem(0);
+		}
+		@media (max-width: $tablet) {
+			order: 1;
+		}
+	}
+	&__title {
+		font-size: rem(28);
+		line-height: 1.15;
+		&:not(:last-child) {
+			margin-bottom: rem(10);
+		}
+	}
+	&__text {
+		font-size: rem(17);
+		line-height: 1.4;
+	}
+	&__image {
+		position: relative;
+		@media (min-width: $tablet) {
+			flex: 0 0 percent(450, 1180);
+			align-self: flex-end;
+		}
+		@media (max-width: $tablet) {
+			order: 3;
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__btn {
+		position: relative;
+		gap: rem(20);
+		padding: rem(16) rem(16) rem(16) rem(30);
+		font-size: rem(17);
+		border-radius: rem(20);
+		@media (max-width: $tablet) {
+			order: 2;
+		}
+		@media (max-width: $mobile) {
+			padding: rem(10) rem(10) rem(10) rem(24);
+			border-radius: rem(16);
+			font-size: rem(16);
+		}
+		span {
+			&:last-child {
+				flex: 0 0 rem(46);
+				width: rem(46);
+				aspect-ratio: 1;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: rem(14);
+				background: #222426;
+				color: #ffda55;
+				font-weight: 600;
+				font-size: rem(13);
+				line-height: 1;
+				@media (max-width: $mobile) {
+					flex: 0 0 rem(38);
+					width: rem(38);
+					border-radius: rem(12);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,270 @@
+.footer {
+	padding: rem(0) rem(20) rem(20);
+	@media (max-width: $tablet) {
+		padding: rem(0) rem(10) rem(10);
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__wrapper {
+		position: relative;
+		border-radius: rem(40);
+		overflow: hidden;
+		padding: rem(25) rem(0);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		@media (min-width: $tablet) {
+			min-height: rem(899);
+		}
+		@media (max-width: $tablet) {
+			border-radius: rem(20);
+			padding: rem(40) rem(0) rem(25);
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 31.76%, rgba(0, 0, 0, 0.5) 96.73%);
+			// Без min-height контент занимает всю высоту блока,
+			// поэтому затемнение начинается раньше и идёт плотнее
+			@media (max-width: $tablet) {
+				background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.7) 100%);
+			}
+		}
+	}
+}
+.footer-main {
+	position: relative;
+	z-index: 2;
+	&:not(:last-child) {
+		margin-bottom: rem(30);
+	}
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		gap: rem(30);
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			gap: rem(35);
+		}
+	}
+	&__left {
+	}
+	&__row {
+		display: flex;
+		gap: rem(55);
+		@media (max-width: $pc) {
+			gap: rem(35);
+		}
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			gap: rem(25);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(60);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(40);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(30);
+			}
+		}
+	}
+	&__menu {
+	}
+	&__list {
+		// Пункты заполняются по колонкам сверху вниз, как в макете
+		columns: 2;
+		column-gap: rem(45);
+		@media (max-width: $pc) {
+			column-gap: rem(30);
+		}
+	}
+	&__item {
+		break-inside: avoid;
+		&:not(:last-child) {
+			margin-bottom: rem(7);
+		}
+		a {
+			font-size: rem(16);
+			line-height: 1.2;
+			letter-spacing: -0.01em;
+			color: #fff;
+			transition: color 0.3s;
+			@media (any-hover: hover) {
+				&:hover {
+					color: #ffda55;
+				}
+			}
+		}
+	}
+	&__links {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: rem(20);
+		max-width: rem(470);
+		@media (max-width: $mobile) {
+			gap: rem(15);
+			max-width: 100%;
+		}
+	}
+	&__link {
+		font-size: rem(16);
+		line-height: 1.25;
+		letter-spacing: -0.01em;
+		color: #fff;
+		text-decoration: underline;
+		transition: color 0.3s;
+		@media (max-width: $mobile) {
+			font-size: rem(15);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: #ffda55;
+			}
+		}
+	}
+	// Соцсети и карта временно скрыты
+	&__contacts {
+		display: none;
+	}
+	&__map {
+		width: rem(212);
+		height: rem(114);
+		border-radius: rem(12);
+		overflow: hidden;
+	}
+	&__right {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		@media (max-width: $tablet) {
+			flex-direction: row;
+			align-items: center;
+			gap: rem(25);
+		}
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: rem(15);
+		}
+	}
+	&__phone-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: rem(4);
+		color: #fff;
+		letter-spacing: -0.01em;
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(0);
+			}
+		}
+	}
+	&__phone {
+		font-weight: 600;
+		font-size: rem(18);
+		white-space: nowrap;
+	}
+	&__prone-descr {
+		font-size: rem(13);
+		line-height: 1.3;
+		display: inline-flex;
+		align-items: center;
+		gap: rem(5);
+		&::before {
+			content: "";
+			flex: 0 0 rem(4);
+			width: rem(4);
+			height: rem(4);
+			border-radius: 50%;
+			background: #9dcd24;
+		}
+	}
+	&__btn {
+		white-space: nowrap;
+	}
+}
+.footer-docs {
+	display: flex;
+	align-items: center;
+	gap: rem(45);
+	@media (max-width: $pc) {
+		gap: rem(25);
+	}
+	@media (max-width: $mobile) {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: rem(15);
+	}
+	&__link {
+		display: inline-flex;
+		align-items: center;
+		gap: rem(10);
+		font-size: rem(16);
+		line-height: 1.2;
+		letter-spacing: -0.01em;
+		color: #fff;
+		transition: color 0.3s;
+		@media (max-width: $mobile) {
+			font-size: rem(15);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: #ffda55;
+			}
+		}
+		img {
+			flex: 0 0 auto;
+			height: auto;
+		}
+	}
+}
+// Временно скрыты
+.footer-socials {
+	display: none;
+	align-items: center;
+	gap: rem(5);
+	&:not(:last-child) {
+		margin-bottom: rem(30);
+	}
+	&__item {
+	}
+}
+
+.footer-bottom {
+	position: relative;
+	padding-top: rem(20);
+	border-top: rem(1) solid rgba(255, 255, 255, 0.2);
+	font-size: rem(14);
+	line-height: 1.15;
+	letter-spacing: -0.01em;
+	color: #c8c8c8;
+	z-index: 2;
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: rem(20);
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: rem(10);
+		}
+	}
+	&__policy {
+	}
+	&__copy {
+	}
+}

@@ -1,0 +1,37 @@
+.noUi-base {
+	height: rem(1);
+	position: relative;
+	z-index: 1;
+}
+
+.noUi-connect,
+.noUi-origin {
+	will-change: transform;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	transform-origin: 0 0;
+	transform-style: flat;
+}
+
+.noUi-horizontal {
+	height: rem(16);
+}
+
+.noUi-connect {
+	background: #000;
+}
+
+.noUi-handle {
+	position: absolute;
+	width: rem(16);
+	height: rem(16);
+	right: rem(-8);
+	top: rem(-8);
+	background-color: #000;
+	border-radius: 50%;
+	cursor: pointer;
+}
