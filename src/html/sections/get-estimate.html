@@ -19,17 +19,20 @@
 						<span>Дизайнер «Ремонт квартир»</span>
 					</div>
 				</div>
-				<form class="callback-form" action="#">
+				<form class="callback-form" action="files/mail.php" method="post" data-validate>
+					<input class="form-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+					<input type="hidden" name="form_title" value="Получить подробную смету">
 					<div class="callback-form__label">Заполните форму ниже</div>
-					<input class="callback-form__input input" type="text" name="callback_name" placeholder="Ваше имя">
-					<input class="callback-form__input input" type="text" name="callback_phone" placeholder="+7 (___) ___-__-__">
-					<button class="callback-form__btn btn">Получить точную смету</button>
+					<input class="callback-form__input input" type="text" name="name" placeholder="Ваше имя" required>
+					<input class="callback-form__input input phone" type="tel" name="phone" placeholder="+7(___) ___-__-__" required>
+					<button class="callback-form__btn btn" type="submit">Получить точную смету</button>
 					<label class="callback-form__checkbox checkbox">
-						<input class="checkbox__input" type="checkbox" value="1" name="form[]">
+						<input class="checkbox__input" type="checkbox" value="Согласен" name="consent" required>
 						<span class="checkbox__text">
 							Соглашаюсь с <a href="" target="_blank">обработкой персональных данных</a> и <a href="" target="_blank">политикой конфиденциальности</a>
 						</span>
 					</label>
+					<div class="form-status" data-form-status></div>
 				</form>
 			</div>
 		</div>

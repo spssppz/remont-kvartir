@@ -12,6 +12,10 @@
 		&:checked + .checkbox__text::after {
 			opacity: 1;
 		}
+		// Сам input визуально скрыт, поэтому ошибку показываем на квадратике
+		&.err + .checkbox__text::before {
+			box-shadow: 0 0 0 rem(2) #ff8a2b;
+		}
 	}
 	&__text {
 		font-family: $second-family;
@@ -41,9 +45,10 @@
 		a {
 			text-decoration: underline;
 			text-decoration-skip-ink: none;
+			transition: color 0.3s;
 			@media (any-hover: hover) {
 				&:hover {
-					text-decoration: none;
+					color: #ffca41;
 				}
 			}
 		}

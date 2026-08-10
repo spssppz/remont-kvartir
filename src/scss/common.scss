@@ -1,3 +1,27 @@
+.page-title {
+	font-size: rem(52);
+	line-height: 1.05;
+	letter-spacing: -0.01em;
+	@media (max-width: $tablet) {
+		font-size: rem(48);
+	}
+	@media (max-width: $mobile) {
+		font-size: rem(44);
+	}
+	@media (max-width: $mobileSmall) {
+		font-size: rem(38);
+	}
+	&:not(:last-child) {
+		margin-bottom: rem(40);
+		@media (max-width: $tablet) {
+			margin-bottom: rem(30);
+		}
+		@media (max-width: $mobile) {
+			margin-bottom: rem(20);
+		}
+	}
+}
+
 .title {
 	font-size: rem(48);
 	line-height: 1.05;

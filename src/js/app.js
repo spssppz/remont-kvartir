@@ -58,7 +58,7 @@ import * as flsForms from "./files/forms/forms.js";
 // import './libs/select.js'
 
 /* (В работе) Модуль работы с масками.*/
-// import "./files/forms/inputmask.js";
+import "./files/forms/inputmask.js";
 
 /* Модуль работы с ползунком */
 /* Документация плагина: https://refreshless.com/nouislider/ */
@@ -111,7 +111,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 // import './libs/wNumb.min.js';
 
 /* Подключаем Яндекс карту */
-// import "./files/map.js";
+import "./files/map.js";
 
 /* Подключаем файлы со своим кодом */
 import "./files/script.js";

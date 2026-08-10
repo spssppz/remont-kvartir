@@ -29,3 +29,35 @@
 // <RANGE>
 // Снипет (HTML):
 // @import "range";
+
+// Поле-ловушка для ботов: скрыто от человека, но остаётся в DOM для автозаполнения бота.
+// display:none не подходит — часть ботов такие поля пропускает
+.form-hp {
+	position: absolute;
+	width: rem(1);
+	height: rem(1);
+	opacity: 0;
+	pointer-events: none;
+}
+
+// Результат отправки формы
+.form-status {
+	font-size: rem(14);
+	line-height: 1.3;
+	letter-spacing: -0.01em;
+	color: #4c9c2e;
+	&:empty {
+		display: none;
+	}
+	&.err {
+		color: #ff5252;
+	}
+	&:not(:first-child) {
+		margin-top: rem(15);
+	}
+}
+
+form._sending {
+	opacity: 0.7;
+	pointer-events: none;
+}

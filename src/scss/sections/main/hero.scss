@@ -54,12 +54,8 @@
 		position: relative;
 		z-index: 2;
 		&:not(:last-child) {
-			margin-bottom: rem(-48);
-			@media (max-width: $tablet) {
-				margin-bottom: rem(-32);
-			}
-			@media (max-width: $mobile) {
-				margin-bottom: rem(-18);
+			@media (min-width: $tablet) {
+				margin-bottom: rem(-48);
 			}
 		}
 	}

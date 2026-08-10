@@ -9,23 +9,23 @@
 						<div class="calc-cost__cap">Количество комнат:</div>
 						<div class="calc-cost__checkbox">
 							<label class="checkbox">
-								<input class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<input class="checkbox__input" type="checkbox" name="rooms[]" value="Студия" form="calc-form">
 								<span class="checkbox__text">Студия</span>
 							</label>
 							<label class="checkbox">
-								<input class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<input class="checkbox__input" type="checkbox" name="rooms[]" value="1-комнатная" form="calc-form">
 								<span class="checkbox__text">1-комнатная</span>
 							</label>
 							<label class="checkbox">
-								<input class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<input class="checkbox__input" type="checkbox" name="rooms[]" value="2-комнатная" form="calc-form">
 								<span class="checkbox__text">2-комнатная</span>
 							</label>
 							<label class="checkbox">
-								<input class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<input class="checkbox__input" type="checkbox" name="rooms[]" value="3-комнатная" form="calc-form">
 								<span class="checkbox__text">3-комнатная</span>
 							</label>
 							<label class="checkbox">
-								<input class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<input class="checkbox__input" type="checkbox" name="rooms[]" value="4-комнатная" form="calc-form">
 								<span class="checkbox__text">4-комнатная</span>
 							</label>
 						</div>
@@ -34,11 +34,11 @@
 						<div class="calc-cost__cap">Укажите тип дома:</div>
 						<div class="calc-cost__checkbox">
 							<label class="checkbox">
-								<input class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<input class="checkbox__input" type="checkbox" name="house[]" value="Новостройка" form="calc-form">
 								<span class="checkbox__text">Новостройка</span>
 							</label>
 							<label class="checkbox">
-								<input class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<input class="checkbox__input" type="checkbox" name="house[]" value="Вторичка" form="calc-form">
 								<span class="checkbox__text">Вторичка</span>
 							</label>
 						</div>
@@ -47,35 +47,38 @@
 						<div class="calc-cost__cap">Вид ремонта:</div>
 						<div class="calc-cost__checkbox">
 							<label class="checkbox">
-								<input class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<input class="checkbox__input" type="checkbox" name="repair[]" value="Под ключ" form="calc-form">
 								<span class="checkbox__text">Под ключ</span>
 							</label>
 							<label class="checkbox">
-								<input class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<input class="checkbox__input" type="checkbox" name="repair[]" value="Дизайнерский" form="calc-form">
 								<span class="checkbox__text">Дизайнерский</span>
 							</label>
 							<label class="checkbox">
-								<input class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<input class="checkbox__input" type="checkbox" name="repair[]" value="Черновой" form="calc-form">
 								<span class="checkbox__text">Черновой</span>
 							</label>
 						</div>
 					</li>
 					<li class="calc-cost__col">
 						<div class="calc-cost__cap">Площадь, кв.м:</div>
-						<input class="calc-cost__input input" type="text" name="form[]" placeholder="">
+						<input class="calc-cost__input input" type="text" inputmode="numeric" name="area" placeholder="" form="calc-form">
 					</li>
 				</ul>
 			</div>
-			<form class="calc-form" action="#">
+			<form class="calc-form" id="calc-form" action="files/mail.php" method="post" data-validate>
+				<input class="form-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+				<input type="hidden" name="form_title" value="Калькулятор стоимости ремонта">
 				<div class="calc-form__title">При заказе <span>дизайн-проект в подарок</span></div>
-				<input class="calc-form__input input" type="text" name="form[]" placeholder="+7 (___) ___-__-__">
-				<button class="calc-form__btn btn">Получить точную смету</button>
+				<input class="calc-form__input phone input" type="tel" name="phone" placeholder="+7(___) ___-__-__" required>
+				<button class="calc-form__btn btn" type="submit">Получить точную смету</button>
 				<label class="checkbox">
-					<input class="checkbox__input" type="checkbox" value="1" name="form[]">
+					<input class="checkbox__input" type="checkbox" value="Согласен" name="consent" required>
 					<span class="checkbox__text">
 						Соглашаюсь с <a href="" target="_blank">обработкой персональных данных</a> и <a href="" target="_blank">политикой конфиденциальности</a>
 					</span>
 				</label>
+				<div class="form-status" data-form-status></div>
 			</form>
 		</div>
 	</div>

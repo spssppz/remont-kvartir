@@ -51,20 +51,24 @@
 	&__container {
 		display: flex;
 		justify-content: space-between;
-		gap: rem(30);
 		@media (max-width: $tablet) {
 			flex-direction: column;
 			gap: rem(35);
 		}
 	}
 	&__left {
+		@media (min-width: $pc) {
+			flex: 0 0 percent(780, 1300);
+		}
+		&:not(:last-child) {
+			@media (min-width: $tablet) {
+				margin-right: percent(40, 1300);
+			}
+		}
 	}
 	&__row {
 		display: flex;
-		gap: rem(55);
-		@media (max-width: $pc) {
-			gap: rem(35);
-		}
+		gap: rem(30);
 		@media (max-width: $mobile) {
 			flex-direction: column;
 			gap: rem(25);
@@ -82,12 +86,8 @@
 	&__menu {
 	}
 	&__list {
-		// Пункты заполняются по колонкам сверху вниз, как в макете
 		columns: 2;
-		column-gap: rem(45);
-		@media (max-width: $pc) {
-			column-gap: rem(30);
-		}
+		column-gap: rem(35);
 	}
 	&__item {
 		break-inside: avoid;
@@ -123,7 +123,6 @@
 		line-height: 1.25;
 		letter-spacing: -0.01em;
 		color: #fff;
-		text-decoration: underline;
 		transition: color 0.3s;
 		@media (max-width: $mobile) {
 			font-size: rem(15);
@@ -134,15 +133,22 @@
 			}
 		}
 	}
-	// Соцсети и карта временно скрыты
 	&__contacts {
-		display: none;
+		flex: 0 0 rem(214);
+		&:not(:last-child) {
+			@media (min-width: $tablet) {
+				margin-right: percent(100, 1300);
+			}
+		}
 	}
 	&__map {
-		width: rem(212);
-		height: rem(114);
-		border-radius: rem(12);
+		aspect-ratio: 214/122;
+		border-radius: rem(20);
 		overflow: hidden;
+		background: #fff;
+		@media (max-width: $tablet) {
+			max-width: rem(300);
+		}
 	}
 	&__right {
 		display: flex;
@@ -196,6 +202,9 @@
 		white-space: nowrap;
 	}
 }
+a.footer-main__link {
+	text-decoration: underline;
+}
 .footer-docs {
 	display: flex;
 	align-items: center;
@@ -225,21 +234,64 @@
 				color: #ffda55;
 			}
 		}
+	}
+	&__link-img {
+		@media (max-width: $mobile) {
+			flex: 0 0 rem(85);
+			width: rem(85);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 		img {
-			flex: 0 0 auto;
+			max-width: 100%;
 			height: auto;
 		}
 	}
 }
 // Временно скрыты
 .footer-socials {
-	display: none;
+	display: flex;
 	align-items: center;
-	gap: rem(5);
+	flex-wrap: wrap;
+	gap: rem(4);
+	@media (min-width: $tablet) {
+		justify-content: space-between;
+	}
+	@media (max-width: $tablet) {
+		gap: rem(10);
+	}
 	&:not(:last-child) {
 		margin-bottom: rem(30);
+		@media (max-width: $tablet) {
+			margin-bottom: rem(20);
+		}
 	}
 	&__item {
+	}
+	&__link {
+		border-radius: rem(100);
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: rem(30);
+		min-width: rem(38);
+		&_tg {
+			background: #339dff;
+		}
+		&_max {
+			background: linear-gradient(225deg, #983ddc 0%, #56c9fe 100%);
+		}
+		&_dzen {
+			background: #2c3036;
+		}
+		&_vk {
+			background: #0077ff;
+		}
+		&_green {
+			background: #4bad20;
+		}
 	}
 }
 

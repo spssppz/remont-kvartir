@@ -2,23 +2,23 @@ const apikey = '51092280-e018-4241-bc97-180570de25d4'
 const coordsLocationMain = [55.03, 82.9141955999]
 
 function initMap() {
-	if (document.querySelector('#map')) {
-		let map = new ymaps.Map('map', {
+	if (document.querySelector('#footer-map')) {
+		let map = new ymaps.Map('footer-map', {
 			center: coordsLocationMain,
-			zoom: 15,
+			zoom: 9,
 		})
 
-		// let placemark = new ymaps.Placemark(coordsLocationMain, {}, {
-		// 	iconLayout: 'default#image',
-		// 	iconImageHref: 'img/icons/location.svg',
-		// 	iconImageSize: [33, 46],
-		// })
+		let placemark = new ymaps.Placemark(coordsLocationMain, {}, {
+			iconLayout: 'default#image',
+			iconImageHref: 'img/logo.svg',
+			iconImageSize: [30, 30],
+		})
 
-		// map.geoObjects.add(placemark)
+		map.geoObjects.add(placemark)
 	}
 };
 
-if (document.querySelector('#contacts-map')) {
+if (document.querySelector('#footer-map')) {
 	window.addEventListener('load',
 		() => setTimeout(() => {
 			const mapScript = document.createElement('script')

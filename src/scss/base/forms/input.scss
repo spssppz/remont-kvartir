@@ -26,6 +26,10 @@ input[type="date"] {
 		opacity: 1; // for Firefox
 		color: inherit;
 	}
+	// Обводку рисуем внутренней тенью, а не border — иначе поле дёргается по высоте
+	&.err {
+		box-shadow: inset 0 0 0 rem(1) #ff8a2b;
+	}
 }
 textarea.input {
 	resize: none;

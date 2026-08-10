@@ -2,45 +2,57 @@
 // Сниппет (HTML): breadcrumbs
 
 .breadcrumbs {
-	&__list {
-		display: flex;
+	font-size: rem(13);
+	letter-spacing: -0.01em;
+	ul {
+		display: inline-flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: rem(5);
 		li {
-			position: relative;
-			padding-right: rem(20);
-			&:last-child {
-				padding: 0;
+			&:not(:last-child) {
+				display: inline-flex;
+				align-items: center;
+				gap: rem(5);
+				color: #777889;
 				&::after {
-					display: none;
+					content: "/";
 				}
 			}
-			&:not(:first-child) {
-				margin-left: rem(20);
-			}
-			&::after {
-				content: "";
-				position: absolute;
-				background: #002c57;
-				width: rem(7);
-				height: rem(7);
-				right: 0;
-				top: 50%;
-				transform: translateY(-50%);
+			a {
+				transition: color 0.3s;
+				@media (any-hover: hover) {
+					&:hover {
+						color: $mainColor;
+					}
+				}
 			}
 		}
 	}
-	&__link {
-		font-size: rem(14);
-		line-height: math.div(20, 14);
-		color: #002445;
-		@media (any-hover: hover) {
-			&:hover {
-				text-decoration: underline;
+	&_w {
+		ul {
+			li {
+				&:not(:last-child) {
+					color: #b7b8ca;
+				}
+				a {
+					color: #b7b8ca;
+					@media (any-hover: hover) {
+						&:hover {
+							color: #fff;
+						}
+					}
+				}
 			}
 		}
 	}
-	&__item {
-		font-size: rem(14);
-		line-height: math.div(20, 14);
-		color: #002445;
+	&:not(:last-child) {
+		margin-bottom: rem(50);
+		@media (max-width: $tablet) {
+			margin-bottom: rem(40);
+		}
+		@media (max-width: $mobile) {
+			margin-bottom: rem(30);
+		}
 	}
 }
