@@ -1,5 +1,5 @@
 const apikey = '51092280-e018-4241-bc97-180570de25d4'
-const coordsLocationMain = [55.03, 82.9141955999]
+const coordsLocationMain = [55.737724569019754, 37.5407215]
 
 function initMap() {
 	if (document.querySelector('#footer-map')) {

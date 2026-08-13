@@ -14,7 +14,7 @@ flsFunctions.menuInit();
 // flsFunctions.closeMenuWithSwipe();
 
 /* Модуль для плавной прокрутки к якорям */
-// flsFunctions.anchors();
+flsFunctions.anchors();
 
 /* Учет плавающей панели на мобильных устройствах при 100vh */
 // flsFunctions.fullVHfix();
@@ -32,7 +32,7 @@ flsFunctions.tabs();
 // flsFunctions.showMore();
 
 /* Попапы Сниппет (HTML): pl */
-// import './libs/popup.js'
+import './libs/popup.js'
 
 /* Модуль параллакса мышью */
 // import './libs/parallax-mouse.js'
@@ -52,7 +52,7 @@ import * as flsForms from "./files/forms/forms.js";
 // flsForms.formQuantity();
 
 /* Модуль звездного рейтинга */
-// flsForms.formRating();
+flsForms.formRating();
 
 /* Модуль работы с select. */
 // import './libs/select.js'
@@ -100,8 +100,8 @@ import * as flsScroll from "./files/scroll/scroll.js";
 // Функционал липкого блока
 // flsScroll.stickyBlock();
 
-/* Документация плагина: https://www.lightgalleryjs.com/docs/ */
-// import "./files/gallery.js";
+/* Документация плагина: https://fancyapps.com/fancybox/ */
+import "./files/gallery.js";
 
 
 /* Динамический адаптив */

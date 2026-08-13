@@ -204,6 +204,7 @@
 }
 a.footer-main__link {
 	text-decoration: underline;
+	text-decoration-skip-ink: none;
 }
 .footer-docs {
 	display: flex;
@@ -283,7 +284,7 @@ a.footer-main__link {
 		&_max {
 			background: linear-gradient(225deg, #983ddc 0%, #56c9fe 100%);
 		}
-		&_dzen {
+		&_dze {
 			background: #2c3036;
 		}
 		&_vk {

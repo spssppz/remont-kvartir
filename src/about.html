@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title":"О компании"
+})
+
+<body>
+
+	<div class="wrapper">
+		@@include('html/header.html')
+		<main class="page">
+			<nav class="breadcrumbs">
+				<ul>
+					<li><a href="">Главная</a></li>
+					<li>О компании</li>
+				</ul>
+			</nav>
+			<!--  -->
+			<!--  -->
+			@@include('html/sections/why-we.html')
+			@@include('html/sections/workers.html')
+			<!--  -->
+			<!--  -->
+			@@include('html/sections/get-estimate.html')
+		</main>
+		@@include('html/footer.html')
+	</div>
+
+	@@include('html/popup.html')
+
+
+	@@include('html/js.html')
+
+</body>
+
+</html>

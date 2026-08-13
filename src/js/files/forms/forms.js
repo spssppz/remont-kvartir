@@ -245,105 +245,89 @@ export function formQuantity() {
 		}
 	});
 }
-/* Модуь звездного рейтинга */
+
+/* Модуль звездного рейтинга */
 export function formRating() {
-	const ratings = document.querySelectorAll('.rating');
-	if (ratings.length > 0) {
-		initRatings();
+	const ratings = document.querySelectorAll('.rating')
+
+	if (!ratings.length) return
+
+	let ratingActive
+
+	ratings.forEach(rating => {
+		initRating(rating)
+	})
+
+	function initRating(rating) {
+		initRatingVars(rating)
+
+		setRatingActiveWidth(rating)
+
+		if (rating.classList.contains('rating_set')) {
+			setRating(rating)
+		}
 	}
-	// Основная функция
-	function initRatings() {
-		let ratingActive, ratingValue;
-		// "Бегаем" по всем рейтингам на странице
-		for (let index = 0; index < ratings.length; index++) {
-			const rating = ratings[index];
-			initRating(rating);
-		}
-		// Инициализируем конкретный рейтинг
-		function initRating(rating) {
-			initRatingVars(rating);
 
-			setRatingActiveWidth();
+	function initRatingVars(rating) {
+		ratingActive = rating.querySelector('.rating__active')
+	}
 
-			if (rating.classList.contains('rating_set')) {
-				setRating(rating);
-			}
-		}
-		// Инициализайция переменных
-		function initRatingVars(rating) {
-			ratingActive = rating.querySelector('.rating__active');
-			ratingValue = rating.querySelector('.rating__value');
-		}
-		// Изменяем ширину активных звезд
-		function setRatingActiveWidth(index = ratingValue.innerHTML) {
-			const ratingActiveWidth = index / 0.05;
-			ratingActive.style.width = `${ratingActiveWidth}%`;
-		}
-		// Возможность указать оценку 
-		function setRating(rating) {
-			const ratingItems = rating.querySelectorAll('.rating__item');
-			for (let index = 0; index < ratingItems.length; index++) {
-				const ratingItem = ratingItems[index];
-				ratingItem.addEventListener("mouseenter", function (e) {
-					// Обновление переменных
-					initRatingVars(rating);
-					// Обновление активных звезд
-					setRatingActiveWidth(ratingItem.value);
-				});
-				ratingItem.addEventListener("mouseleave", function (e) {
-					// Обновление активных звезд
-					setRatingActiveWidth();
-				});
-				ratingItem.addEventListener("click", function (e) {
-					// Обновление переменных
-					initRatingVars(rating);
+	function setRatingActiveWidth(rating, value = rating.dataset.rating) {
+		const ratingActiveWidth = value / 0.05
+		ratingActive.style.width = `${ratingActiveWidth}%`
+	}
 
-					if (rating.dataset.ajax) {
-						// "Отправить" на сервер
-						setRatingValue(ratingItem.value, rating);
-					} else {
-						// Отобразить указанную оцнку
-						ratingValue.innerHTML = index + 1;
-						setRatingActiveWidth();
-					}
-				});
-			}
-		}
-		async function setRatingValue(value, rating) {
-			if (!rating.classList.contains('rating_sending')) {
-				rating.classList.add('rating_sending');
+	function setRating(rating) {
+		const ratingItems = rating.querySelectorAll('.rating__item')
 
-				// Отправика данных (value) на сервер
-				let response = await fetch('rating.json', {
-					method: 'GET',
+		ratingItems.forEach(ratingItem => {
+			ratingItem.addEventListener('mouseenter', () => {
+				initRatingVars(rating)
+				setRatingActiveWidth(rating, ratingItem.value)
+			})
 
-					//body: JSON.stringify({
-					//	userRating: value
-					//}),
-					//headers: {
-					//	'content-type': 'application/json'
-					//}
+			ratingItem.addEventListener('mouseleave', () => {
+				setRatingActiveWidth(rating)
+			})
 
-				});
-				if (response.ok) {
-					const result = await response.json();
+			ratingItem.addEventListener('click', () => {
+				initRatingVars(rating)
 
-					// Получаем новый рейтинг
-					const newRating = result.newRating;
-
-					// Вывод нового среднего результата
-					ratingValue.innerHTML = newRating;
-
-					// Обновление активных звезд
-					setRatingActiveWidth();
-
-					rating.classList.remove('rating_sending');
+				if (rating.dataset.ajax) {
+					setRatingValue(ratingItem.value, rating)
 				} else {
-					alert("Ошибка");
-
-					rating.classList.remove('rating_sending');
+					rating.dataset.rating = ratingItem.value
+					setRatingActiveWidth(rating)
 				}
-			}
-		}
+			})
+		})
 	}
+
+	// async function setRatingValue(value, rating) {
+	// 	if (rating.classList.contains('rating_sending')) return
+
+	// 	rating.classList.add('rating_sending')
+
+	// 	try {
+	// 		const response = await fetch('rating.json', {
+	// 			method: 'GET'
+	// 		})
+
+	// 		if (!response.ok) {
+	// 			throw new Error()
+	// 		}
+
+	// 		const result = await response.json()
+
+	// 		rating.dataset.rating = result.newRating
+
+	// 		initRatingVars(rating)
+	// 		setRatingActiveWidth(rating)
+
+	// 		rating.classList.remove('rating_sending')
+	// 	} catch {
+	// 		alert('Ошибка')
+	// 		rating.classList.remove('rating_sending')
+	// 	}
+	// }
 }

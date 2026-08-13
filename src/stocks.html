@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title":"Акции"
+})
+
+<body>
+
+	<div class="wrapper">
+		@@include('html/header.html')
+		<main class="page">
+			<section class="stocks">
+				<div class="stocks__container">
+					<nav class="breadcrumbs">
+						<ul>
+							<li><a href="">Главная</a></li>
+							<li>Акции</li>
+						</ul>
+					</nav>
+					<h1 class="stocks__title page-title">Акции и предложения от «Ремонт квартир»</h1>
+					<div class="stocks__text">
+						<p>Получайте больше выгоды с нашими предложениями для новых и текущих клиентов</p>
+					</div>
+					<div class="stocks__list">
+						<article class="stock-item">
+							<div class="stock-item__image">
+								<img srcset="@img/stocks/01@2x.jpg 2x" src="@img/stocks/01.jpg" width="380" height="240" alt="">
+							</div>
+							<div class="stock-item__right">
+								<h2 class="stock-item__title"><a href="">Расширенный клининг в подарок от «Сказано-Сделано»</a></h2>
+								<div class="stock-item__text">
+									<p>Хотите, чтобы ваш дом засиял чистотой сразу после ремонта? При заказе ремонтно-отделочных работ на сумму от 700 тыс. руб. в строительной компании «Сказано-Сделано» вы можете выбрать подарок в виде сертификата на услуги по расширенному профессиональному клинингу помещения или
+										скидку на ремонт.</p>
+								</div>
+								<time class="stock-item__date" datetime="24-08-2026">24 июл 2026</time>
+							</div>
+						</article>
+						<article class="stock-item">
+							<div class="stock-item__image">
+								<img srcset="@img/stocks/01@2x.jpg 2x" src="@img/stocks/01.jpg" width="380" height="240" alt="">
+							</div>
+							<div class="stock-item__right">
+								<h2 class="stock-item__title"><a href="">Дизайн проект в подарок и выгода до 25% на ремонт</a></h2>
+								<div class="stock-item__text">
+									<p>Мечтаете о стильной и уютной квартире с дизайнерским ремонтом? Успейте исполнить свою мечту в феврале. При заказе ремонтно-отделочных работ на сумму от 1 млн. руб. в компании «Ремонт квартир» вы можете сэкономить до 25%* на ремонте и получить от нас в подарок дизайн проект
+										«Лёгкий старт»*</p>
+								</div>
+								<time class="stock-item__date" datetime="24-08-2026">24 июл 2026</time>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+			@@include('html/sections/main/about.html')
+			@@include('html/sections/certificates.html')
+			@@include('html/sections/workers.html')
+		</main>
+		@@include('html/footer.html')
+	</div>
+
+	@@include('html/popup.html')
+
+
+	@@include('html/js.html')
+
+</body>
+
+</html>

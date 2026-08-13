@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title":"Проект ремонта"
+})
+
+<body>
+
+	<div class="wrapper">
+		@@include('html/header.html')
+		<main class="page">
+			<!--
+				TODO: hero проекта (фото объекта, заголовок, адрес, breadcrumbs) — нет в sections
+				По макету Figma (страница "proekt") хлебные крошки: Главная / Портфолио / [название объекта]
+			-->
+			<!--
+				TODO: инфо-карточка объекта (площадь, кол-во комнат, бюджет, сроки) — нет в sections
+			-->
+			<!--
+				TODO: галерея миниатюр по проекту — нет в sections
+			-->
+			<!--
+				TODO: текстовые блоки описания проекта — нет в sections
+			-->
+			<!--
+				TODO: блок "Видео проекта" — нет в sections
+			-->
+			<!--
+				TODO: блок "Дизайн проекта" (фото + текст) — нет в sections
+			-->
+			<!--
+				TODO: блок "Планировка" (схема/фото) — нет в sections
+			-->
+			<!--
+				TODO: разбивка по комнатам (Кухня / Гостиная / Спальня и т.д., фото + текст на каждую) — нет в sections
+			-->
+			<!--
+				TODO: блок "Похожие проекты" (grid карточек) — нет в sections,
+				можно частично переиспользовать разметку карточки .project из sections/projects.html
+			-->
+			@@include('html/sections/why-we.html')
+			@@include('html/sections/get-estimate.html')
+		</main>
+		@@include('html/footer.html')
+	</div>
+
+	@@include('html/popup.html')
+
+
+	@@include('html/js.html')
+
+</body>
+
+</html>

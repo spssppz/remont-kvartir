@@ -2,24 +2,65 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	gap: rem(50);
+	@media (max-width: $tablet) {
+		gap: rem(30);
+	}
+	@media (max-width: $mobileSmall) {
+		gap: rem(20);
+		justify-content: space-between;
+	}
 	&__arrow {
+		flex: 0 0 rem(30);
+		width: rem(30);
+		height: rem(30);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: color 0.3s;
+		svg {
+			path {
+				stroke: currentColor;
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: #ffca41;
+			}
+		}
 	}
 	&__list {
 		display: flex;
+		gap: rem(5);
 	}
 	&__item {
 	}
 	&__link {
-		font-weight: 700;
-		font-size: rem(15);
-		color: #3d3d3d;
-		display: inline-flex;
+		font-weight: 500;
+		font-size: rem(14);
+		line-height: 1.4;
+		letter-spacing: -0.01em;
+		padding: rem(10);
+		display: flex;
 		justify-content: center;
 		align-items: center;
-		border: rem(2) solid #eaeaea;
+		text-align: center;
+		min-width: rem(48);
+		min-height: rem(48);
+		transition: background 0.3s;
+		border-radius: rem(16);
+		@media (max-width: $mobile) {
+			border-radius: rem(12);
+			min-width: rem(40);
+			min-height: rem(40);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: #ffda55;
+			}
+		}
 		&_active {
-			background: #f73313;
-			color: #fff;
+			background: #ffda55;
 		}
 	}
 }

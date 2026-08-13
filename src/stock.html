@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title":"Акция"
+})
+
+<body>
+
+	<div class="wrapper">
+		@@include('html/header.html')
+		<main class="page">
+			<section class="stock">
+				<div class="stock__container">
+					<nav class="breadcrumbs">
+						<ul>
+							<li><a href="">Главная</a></li>
+							<li><a href="">Акции</a></li>
+							<li>Расширенный клининг в подарок</li>
+						</ul>
+					</nav>
+					<h1 class="stock__title page-title">Расширенный клининг в подарок</h1>
+					<div class="stock__text stock__text_top">
+						<p>Генеральная уборка — как вишенка на торте</p>
+					</div>
+					<div class="stock__image">
+						<img srcset="@img/stocks/main@2x.jpg 2x" src="@img/stocks/main.jpg" width="1300" height="530" fetchpriority="high" alt="">
+					</div>
+					<div class="stock__text">
+						<p>Мечтаете о стильной и уютной квартире с дизайнерским ремонтом? Успейте исполнить свою мечту в феврале. <br> При заказе ремонтно-отделочных работ на сумму от 1 млн. руб. в компании «Сказано-Сделано» вы можете сэкономить до 25%* на ремонте и получить от нас в подарок дизайн проект
+							«Легкий старт»*.</p>
+						<p><span>Акция действительна до 01.05.2026</span></p>
+						<p>Как воспользоваться акцией?</p>
+						<ul>
+							<li>Заключите договор на ремонт на сумму от 1 млн. руб. и подготовку дизайн-проекта</li>
+							<li>Оплатите и примите выполненные работы, подписав итоговый акт</li>
+							<li>Получите подарок, который учитывается при окончательном расчете</li>
+						</ul>
+					</div>
+					<div class="stock__descr">Не является публичной офертой, подробности в отделе продаж</div>
+				</div>
+			</section>
+			@@include('html/sections/main/about.html')
+			@@include('html/sections/certificates.html')
+			@@include('html/sections/workers.html')
+		</main>
+		@@include('html/footer.html')
+	</div>
+
+	@@include('html/popup.html')
+
+
+	@@include('html/js.html')
+
+</body>
+
+</html>

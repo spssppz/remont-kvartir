@@ -80,6 +80,11 @@ body {
 // Подключение стилей отдельных страниц
 @import "home"; // Главная
 //
+@import "services";
+@import "team";
+@import "reviews";
+@import "stocks";
+@import "news";
 @import "smi";
 
 .links {

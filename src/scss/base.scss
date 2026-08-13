@@ -3,7 +3,7 @@
 @import "base/forms/forms";
 
 // Стили попапов
-// @import "base/popup";
+@import "base/popup";
 
 // Стили хлебных крошек
 @import "base/breadcrumbs";
@@ -12,10 +12,14 @@
 // @import "base/spollers";
 
 // Стили пагинации
-// @import "base/pagging";
+@import "base/pagging";
 
 // Базовые стили swiper
 @import "base/swiper";
+
+// Галерея Fancybox. Импорт без расширения — так Dart Sass встраивает CSS
+// в общий файл, а не оставляет @import url()
+@import "../../node_modules/@fancyapps/ui/dist/fancybox/fancybox";
 
 // Стили табов
 // @import "base/tabs";

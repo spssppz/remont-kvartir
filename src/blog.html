@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title":"Блог"
+})
+
+<body>
+
+	<div class="wrapper">
+		@@include('html/header.html')
+		<main class="page">
+			<section class="news-hero">
+				<div class="news-hero__wrapper">
+					<img class="news-hero__bg" srcset="@img/news/hero-bg@2x.jpg 2x" src="@img/news/hero-bg.jpg" width="1500" height="470" fetchpriority="high" alt="">
+					<div class="news-hero__container">
+						<div class="news-hero__breadcrumbs breadcrumbs breadcrumbs_w">
+							<ul>
+								<li><a href="">Главная</a></li>
+								<li>Блог</li>
+							</ul>
+						</div>
+						<h1 class="news-hero__title page-title">Блог о ремонте квартир</h1>
+						<h2 class="news-hero__subtitle">Бесплатный выезд замерщика по Москве в день обращения</h2>
+						<div class="news-hero__body">
+							<div class="news-cats">
+								<div class="news-cats__cap">КАТЕГОРИИ</div>
+								<ul class="news-cats__list">
+									<li class="news-cats__item"><a href="">Ремонт <span>8</span></a></li>
+									<li class="news-cats__item"><a href="">Материалы <span>22</span></a></li>
+									<li class="news-cats__item"><a href="">Сантехника <span>22</span></a></li>
+									<li class="news-cats__item"><a href="">Электрика <span>8</span></a></li>
+									<li class="news-cats__item"><a href="">Электрика <span>8</span></a></li>
+									<li class="news-cats__item"><a href="">Сантехника <span>22</span></a></li>
+									<li class="news-cats__item"><a href="">Ремонт <span>8</span></a></li>
+									<li class="news-cats__item"><a href="">Сантехника <span>22</span></a></li>
+									<li class="news-cats__item"><a href="">Сантехника <span>22</span></a></li>
+									<li class="news-cats__item"><a href="">Электрика <span>8</span></a></li>
+								</ul>
+							</div>
+							<div class="news-tags">
+								<div class="news-tags__cap">Облако тегов</div>
+								<ul class="news-tags__list">
+									<li class="news-tags__item"><a href="">Ванная</a></li>
+									<li class="news-tags__item"><a href="">Гостиная</a></li>
+									<li class="news-tags__item"><a href="">УК</a></li>
+									<li class="news-tags__item"><a href="">Электрика</a></li>
+									<li class="news-tags__item"><a href="">Сантехника</a></li>
+									<li class="news-tags__item"><a href="">Потолок</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="news">
+				<div class="news__container">
+					<div class="news__items">
+						<article class="news-item">
+							<div class="news-item__image">
+								<img srcset="@img/news/1@2x.jpg 2x" src="@img/news/1.jpg" width="370" height="234" loading="lazy" alt="Базовая формула для работы без дизайнера">
+							</div>
+							<h3 class="news-item__label"><a href="">Базовая формула для работы без дизайнера</a></h3>
+							<div class="news-item__text">
+								<p>Решаю сложные задачи быстрее, чем вы скажете «а давайте подумаем». Моё правило: любой строительный конфуз — это просто </p>
+							</div>
+							<div class="news-item-info">
+								<time class="news-item-info__date" datetime="24-06-2026">24 июл 2026</time>
+								<div class="news-item-info__read">5 мин</div>
+								<div class="news-item-info__view">678</div>
+							</div>
+						</article>
+						<article class="news-item">
+							<div class="news-item__image">
+								<img srcset="@img/news/2@2x.jpg 2x" src="@img/news/2.jpg" width="370" height="234" loading="lazy" alt="Ненужный сломанный велосипед можно использовать в качестве подставки для цветов на даче">
+							</div>
+							<h3 class="news-item__label"><a href="">Ненужный сломанный велосипед можно использовать в качестве подставки для цветов на даче</a></h3>
+							<div class="news-item__text">
+								<p>Решаю сложные задачи быстрее, чем вы скажете «а давайте подумаем»</p>
+							</div>
+							<div class="news-item-info">
+								<time class="news-item-info__date" datetime="24-06-2026">24 июл 2026</time>
+								<div class="news-item-info__read">5 мин</div>
+								<div class="news-item-info__view">678</div>
+							</div>
+						</article>
+						<article class="news-item">
+							<div class="news-item__image">
+								<img srcset="@img/news/3@2x.jpg 2x" src="@img/news/3.jpg" width="370" height="234" loading="lazy" alt="7 вещей, которым можно подарить вторую жизнь на даче">
+							</div>
+							<h3 class="news-item__label"><a href="">7 вещей, которым можно подарить вторую жизнь на даче</a></h3>
+							<div class="news-item__text">
+								<p>Решаю сложные задачи быстрее, чем вы скажете «а давайте подумаем»</p>
+							</div>
+							<div class="news-item-info">
+								<time class="news-item-info__date" datetime="24-06-2026">24 июл 2026</time>
+								<div class="news-item-info__read">5 мин</div>
+								<div class="news-item-info__view">678</div>
+							</div>
+						</article>
+						<article class="news-item">
+							<div class="news-item__image">
+								<img srcset="@img/news/4@2x.jpg 2x" src="@img/news/4.jpg" width="370" height="234" loading="lazy" alt="Базовая формула для работы без дизайнера">
+							</div>
+							<h3 class="news-item__label"><a href="">Базовая формула для работы без дизайнера</a></h3>
+							<div class="news-item__text">
+								<p>Решаю сложные задачи быстрее, чем вы скажете «а давайте подумаем». Моё правило: любой строительный</p>
+							</div>
+							<div class="news-item-info">
+								<time class="news-item-info__date" datetime="24-06-2026">24 июл 2026</time>
+								<div class="news-item-info__read">5 мин</div>
+								<div class="news-item-info__view">678</div>
+							</div>
+						</article>
+						<article class="news-item">
+							<div class="news-item__image">
+								<img srcset="@img/news/5@2x.jpg 2x" src="@img/news/5.jpg" width="370" height="234" loading="lazy" alt="Ненужный сломанный велосипед можно использовать в качестве подставки для цветов на даче">
+							</div>
+							<h3 class="news-item__label"><a href="">Ненужный сломанный велосипед можно использовать в качестве подставки для цветов на даче</a></h3>
+							<div class="news-item__text">
+								<p>Решаю сложные задачи быстрее, чем вы скажете «а давайте подумаем».</p>
+							</div>
+							<div class="news-item-info">
+								<time class="news-item-info__date" datetime="24-06-2026">24 июл 2026</time>
+								<div class="news-item-info__read">5 мин</div>
+								<div class="news-item-info__view">678</div>
+							</div>
+						</article>
+						<article class="news-item">
+							<div class="news-item__image">
+								<img srcset="@img/news/6@2x.jpg 2x" src="@img/news/6.jpg" width="370" height="234" loading="lazy" alt="7 вещей, которым можно подарить вторую жизнь на даче">
+							</div>
+							<h3 class="news-item__label"><a href="">7 вещей, которым можно подарить вторую жизнь на даче</a></h3>
+							<div class="news-item__text">
+								<p>Решаю сложные задачи быстрее, чем вы скажете «а давайте подумаем»</p>
+							</div>
+							<div class="news-item-info">
+								<time class="news-item-info__date" datetime="24-06-2026">24 июл 2026</time>
+								<div class="news-item-info__read">5 мин</div>
+								<div class="news-item-info__view">678</div>
+							</div>
+						</article>
+						<article class="news-item">
+							<div class="news-item__image">
+								<img srcset="@img/news/1@2x.jpg 2x" src="@img/news/1.jpg" width="370" height="234" loading="lazy" alt="Базовая формула для работы без дизайнера">
+							</div>
+							<h3 class="news-item__label"><a href="">Базовая формула для работы без дизайнера</a></h3>
+							<div class="news-item__text">
+								<p>Решаю сложные задачи быстрее, чем вы скажете «а давайте подумаем». Моё правило: любой строительный конфуз — это просто </p>
+							</div>
+							<div class="news-item-info">
+								<time class="news-item-info__date" datetime="24-06-2026">24 июл 2026</time>
+								<div class="news-item-info__read">5 мин</div>
+								<div class="news-item-info__view">678</div>
+							</div>
+						</article>
+						<article class="news-item">
+							<div class="news-item__image">
+								<img srcset="@img/news/2@2x.jpg 2x" src="@img/news/2.jpg" width="370" height="234" loading="lazy" alt="Ненужный сломанный велосипед можно использовать в качестве подставки для цветов на даче">
+							</div>
+							<h3 class="news-item__label"><a href="">Ненужный сломанный велосипед можно использовать в качестве подставки для цветов на даче</a></h3>
+							<div class="news-item__text">
+								<p>Решаю сложные задачи быстрее, чем вы скажете «а давайте подумаем»</p>
+							</div>
+							<div class="news-item-info">
+								<time class="news-item-info__date" datetime="24-06-2026">24 июл 2026</time>
+								<div class="news-item-info__read">5 мин</div>
+								<div class="news-item-info__view">678</div>
+							</div>
+						</article>
+						<article class="news-item">
+							<div class="news-item__image">
+								<img srcset="@img/news/3@2x.jpg 2x" src="@img/news/3.jpg" width="370" height="234" loading="lazy" alt="7 вещей, которым можно подарить вторую жизнь на даче">
+							</div>
+							<h3 class="news-item__label"><a href="">7 вещей, которым можно подарить вторую жизнь на даче</a></h3>
+							<div class="news-item__text">
+								<p>Решаю сложные задачи быстрее, чем вы скажете «а давайте подумаем»</p>
+							</div>
+							<div class="news-item-info">
+								<time class="news-item-info__date" datetime="24-06-2026">24 июл 2026</time>
+								<div class="news-item-info__read">5 мин</div>
+								<div class="news-item-info__view">678</div>
+							</div>
+						</article>
+						<article class="news-item">
+							<div class="news-item__image">
+								<img srcset="@img/news/4@2x.jpg 2x" src="@img/news/4.jpg" width="370" height="234" loading="lazy" alt="Базовая формула для работы без дизайнера">
+							</div>
+							<h3 class="news-item__label"><a href="">Базовая формула для работы без дизайнера</a></h3>
+							<div class="news-item__text">
+								<p>Решаю сложные задачи быстрее, чем вы скажете «а давайте подумаем». Моё правило: любой строительный</p>
+							</div>
+							<div class="news-item-info">
+								<time class="news-item-info__date" datetime="24-06-2026">24 июл 2026</time>
+								<div class="news-item-info__read">5 мин</div>
+								<div class="news-item-info__view">678</div>
+							</div>
+						</article>
+						<article class="news-item">
+							<div class="news-item__image">
+								<img srcset="@img/news/5@2x.jpg 2x" src="@img/news/5.jpg" width="370" height="234" loading="lazy" alt="Ненужный сломанный велосипед можно использовать в качестве подставки для цветов на даче">
+							</div>
+							<h3 class="news-item__label"><a href="">Ненужный сломанный велосипед можно использовать в качестве подставки для цветов на даче</a></h3>
+							<div class="news-item__text">
+								<p>Решаю сложные задачи быстрее, чем вы скажете «а давайте подумаем».</p>
+							</div>
+							<div class="news-item-info">
+								<time class="news-item-info__date" datetime="24-06-2026">24 июл 2026</time>
+								<div class="news-item-info__read">5 мин</div>
+								<div class="news-item-info__view">678</div>
+							</div>
+						</article>
+						<article class="news-item">
+							<div class="news-item__image">
+								<img srcset="@img/news/6@2x.jpg 2x" src="@img/news/6.jpg" width="370" height="234" loading="lazy" alt="7 вещей, которым можно подарить вторую жизнь на даче">
+							</div>
+							<h3 class="news-item__label"><a href="">7 вещей, которым можно подарить вторую жизнь на даче</a></h3>
+							<div class="news-item__text">
+								<p>Решаю сложные задачи быстрее, чем вы скажете «а давайте подумаем»</p>
+							</div>
+							<div class="news-item-info">
+								<time class="news-item-info__date" datetime="24-06-2026">24 июл 2026</time>
+								<div class="news-item-info__read">5 мин</div>
+								<div class="news-item-info__view">678</div>
+							</div>
+						</article>
+						<article class="news-item">
+							<div class="news-item__image">
+								<img srcset="@img/news/1@2x.jpg 2x" src="@img/news/1.jpg" width="370" height="234" loading="lazy" alt="Базовая формула для работы без дизайнера">
+							</div>
+							<h3 class="news-item__label"><a href="">Базовая формула для работы без дизайнера</a></h3>
+							<div class="news-item__text">
+								<p>Решаю сложные задачи быстрее, чем вы скажете «а давайте подумаем». Моё правило: любой строительный конфуз — это просто </p>
+							</div>
+							<div class="news-item-info">
+								<time class="news-item-info__date" datetime="24-06-2026">24 июл 2026</time>
+								<div class="news-item-info__read">5 мин</div>
+								<div class="news-item-info__view">678</div>
+							</div>
+						</article>
+						<article class="news-item">
+							<div class="news-item__image">
+								<img srcset="@img/news/2@2x.jpg 2x" src="@img/news/2.jpg" width="370" height="234" loading="lazy" alt="Ненужный сломанный велосипед можно использовать в качестве подставки для цветов на даче">
+							</div>
+							<h3 class="news-item__label"><a href="">Ненужный сломанный велосипед можно использовать в качестве подставки для цветов на даче</a></h3>
+							<div class="news-item__text">
+								<p>Решаю сложные задачи быстрее, чем вы скажете «а давайте подумаем»</p>
+							</div>
+							<div class="news-item-info">
+								<time class="news-item-info__date" datetime="24-06-2026">24 июл 2026</time>
+								<div class="news-item-info__read">5 мин</div>
+								<div class="news-item-info__view">678</div>
+							</div>
+						</article>
+						<article class="news-item">
+							<div class="news-item__image">
+								<img srcset="@img/news/3@2x.jpg 2x" src="@img/news/3.jpg" width="370" height="234" loading="lazy" alt="7 вещей, которым можно подарить вторую жизнь на даче">
+							</div>
+							<h3 class="news-item__label"><a href="">7 вещей, которым можно подарить вторую жизнь на даче</a></h3>
+							<div class="news-item__text">
+								<p>Решаю сложные задачи быстрее, чем вы скажете «а давайте подумаем»</p>
+							</div>
+							<div class="news-item-info">
+								<time class="news-item-info__date" datetime="24-06-2026">24 июл 2026</time>
+								<div class="news-item-info__read">5 мин</div>
+								<div class="news-item-info__view">678</div>
+							</div>
+						</article>
+					</div>
+					@@include('html/pagging.html')
+				</div>
+			</div>
+		</main>
+		@@include('html/footer.html')
+	</div>
+
+	@@include('html/popup.html')
+
+
+	@@include('html/js.html')
+
+</body>
+
+</html>
