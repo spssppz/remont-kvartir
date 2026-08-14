@@ -10,9 +10,109 @@
 	<div class="wrapper">
 		@@include('html/header.html')
 		<main class="page">
-			<!--  -->
+			<section class="projects">
+				<div class="projects__container">
+					<nav class="breadcrumbs">
+						<ul>
+							<li><a href="">Главная</a></li>
+							<li>Проекты</li>
+						</ul>
+					</nav>
+					<h2 class="projects__title page-title">Выполненные проекты ремонтов
+						СК «Ремонт квартир»</h2>
+					<h3 class="projects__subtitle subtitle">Мы сдали 170 объектов в 2025 году</h3>
+					<div class="projects__tabs" data-tabs>
+						<nav class="projects__navigation tabs-nav" data-tabs-titles>
+							<button class="projects__button tabs-btn _tab-active" type="button">Портфолио ремонтов квартир</button>
+							<button class="projects__button tabs-btn" type="button">Портфолио ремонтов домов</button>
+							<button class="projects__button tabs-btn" type="button">Портфолио дизайн-проектов</button>
+						</nav>
+						<div class="projects__content" data-tabs-body>
+							<div class="projects__body">
+								<ul class="projects__cols">
+									<li class="project">
+										<img src="@img/projects/1/01.jpg" width="420" height="420" loading="lazy" alt="Березовой рощи, 12">
+										<a class="project__link" href="@img/projects/1/01.jpg" data-images="9">
+											<span>Березовой рощи, 12</span>
+											<span>
+												<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M2.128 1.28618L9.48529 0.99996L9.19907 8.35725M9.48529 0.99996L1.00001 9.48524" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+											</span>
+										</a>
+									</li>
+									<li class="project">
+										<img src="@img/projects/2/01.jpg" width="420" height="420" loading="lazy" alt="ЖК Бригантина">
+										<a class="project__link" href="@img/projects/2/01.jpg" data-images="5">
+											<span>ЖК Бригантина</span>
+											<span>
+												<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M2.128 1.28618L9.48529 0.99996L9.19907 8.35725M9.48529 0.99996L1.00001 9.48524" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="projects__body" hidden>
+								<ul class="projects__cols">
+									<li class="project">
+										<img src="@img/projects/3/01.jpg" width="420" height="420" loading="lazy" alt="Катуково">
+										<a class="project__link" href="@img/projects/3/01.jpg" data-images="7">
+											<span>Катуково</span>
+											<span>
+												<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M2.128 1.28618L9.48529 0.99996L9.19907 8.35725M9.48529 0.99996L1.00001 9.48524" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+											</span>
+										</a>
+									</li>
+									<li class="project">
+										<img src="@img/projects/4/01.jpg" width="420" height="420" loading="lazy" alt="Прокшинский пр">
+										<a class="project__link" href="@img/projects/4/01.jpg" data-images="7">
+											<span>Прокшинский пр</span>
+											<span>
+												<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M2.128 1.28618L9.48529 0.99996L9.19907 8.35725M9.48529 0.99996L1.00001 9.48524" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="projects__body" hidden>
+								<ul class="projects__cols">
+									<li class="project">
+										<img src="@img/projects/5/01.jpg" width="420" height="420" loading="lazy" alt="Пулковская">
+										<a class="project__link" href="@img/projects/5/01.jpg" data-images="5">
+											<span>Пулковская</span>
+											<span>
+												<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M2.128 1.28618L9.48529 0.99996L9.19907 8.35725M9.48529 0.99996L1.00001 9.48524" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+											</span>
+										</a>
+									</li>
+									<li class="project">
+										<img src="@img/projects/6/01.jpg" width="420" height="420" loading="lazy" alt="Синявинская улица">
+										<a class="project__link" href="@img/projects/6/01.jpg" data-images="10">
+											<span>Синявинская улица</span>
+											<span>
+												<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M2.128 1.28618L9.48529 0.99996L9.19907 8.35725M9.48529 0.99996L1.00001 9.48524" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			@@include('html/sections/advantages.html')
-			<!--  -->
+			@@include('html/sections/get-design.html')
 		</main>
 		@@include('html/footer.html')
 	</div>

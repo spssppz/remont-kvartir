@@ -10,9 +10,84 @@
 	<div class="wrapper">
 		@@include('html/header.html')
 		<main class="page">
-			<!--  -->
+			<section class="services-hero">
+				<div class="services-hero__wrapper">
+					<img class="services-hero__bg" srcset="@img/services/bg@2x.jpg 2x" src="@img/services/bg.jpg" width="1500" height="320" fetchpriority="high" alt="">
+					<div class="services-hero__container">
+						<nav class="breadcrumbs breadcrumbs_w">
+							<ul>
+								<li><a href="">Главная</a></li>
+								<li>Услуги</li>
+							</ul>
+						</nav>
+						<h1 class="services-hero__title page-title">Услуги компании</h1>
+						<h2 class="services-hero__subtitle">Мы делаем ремонт, который не превращается в историю на год</h2>
+						<div class="services-hero__text">
+							<p>Но если более развёрнуто — мы проектируем, рассчитываем, закупаем, строим, контролируем и гарантируем. От первой рулетки до последней розетки</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="services">
+				<div class="services__container">
+					<ul class="services__cols">
+						<li class="service">
+							<div class="service__image">
+								<img srcset="@img/services/01@2x.jpg 2x" src="@img/services/01.jpg" width="90" height="90" loading="lazy" alt="">
+							</div>
+							<div class="service__content">
+								<h2 class="service__label"><a href="">Ремонт</a></h2>
+								<ul class="service__list">
+									<li class="service__item"><a href="">Ремонт квартир</a></li>
+									<li class="service__item"><a href="">Ремонт квартир в новостройках</a></li>
+									<li class="service__item"><a href="">Ремонт вторичного жилья</a></li>
+									<li class="service__item"><a href="">Ремонт комнат</a></li>
+									<li class="service__item"><a href="">Ремонт коттеджей</a></li>
+									<li class="service__item"><a href="">Ремонт таунхаусов</a></li>
+									<li class="service__item"><a href="">Прочие услуги</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="service">
+							<div class="service__image">
+								<img srcset="@img/services/02@2x.jpg 2x" src="@img/services/02.jpg" width="90" height="90" loading="lazy" alt="">
+							</div>
+							<div class="service__content">
+								<h2 class="service__label"><a href="">Виды ремонта</a></h2>
+								<ul class="service__list">
+									<li class="service__item"><a href="">Черновой</a></li>
+									<li class="service__item"><a href="">Косметический</a></li>
+									<li class="service__item"><a href="">Капитальный</a></li>
+									<li class="service__item"><a href="">Дизайнерский</a></li>
+									<li class="service__item"><a href="">Евроремонт</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="service">
+							<div class="service__image">
+								<img srcset="@img/services/03@2x.jpg 2x" src="@img/services/03.jpg" width="90" height="90" loading="lazy" alt="">
+							</div>
+							<div class="service__content">
+								<h2 class="service__label"><a href="">Дизайн-проект</a></h2>
+								<ul class="service__list">
+									<li class="service__item"><a href="">Классический стиль</a></li>
+									<li class="service__item"><a href="">Минималистский стиль</a></li>
+									<li class="service__item"><a href="">Ретро стиль</a></li>
+									<li class="service__item"><a href="">Ваби саби стиль</a></li>
+									<li class="service__item"><a href="">Джапанди стиль</a></li>
+									<li class="service__item"><a href="">Винтажный стиль</a></li>
+									<li class="service__item"><a href="">Баухаус стиль</a></li>
+									<li class="service__item"><a href="">Скандинавский стиль</a></li>
+									<li class="service__item"><a href="">Арт-деко стиль</a></li>
+									<li class="service__item"><a href="">Модерн стиль</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
 			@@include('html/sections/advantages.html')
-			<!--  -->
+			@@include('html/sections/get-design.html')
 		</main>
 		@@include('html/footer.html')
 	</div>

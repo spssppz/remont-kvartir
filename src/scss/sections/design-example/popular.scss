@@ -1,0 +1,158 @@
+.design-popular {
+	padding: rem(50) rem(0) rem(55);
+	@media (max-width: $tablet) {
+		padding: rem(40) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(25) rem(0);
+	}
+	&__container {
+	}
+	&__title {
+	}
+	&__items {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: rem(35) rem(20);
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr 1fr;
+			gap: rem(20);
+		}
+		@media (max-width: $mobileSmall) {
+			grid-template-columns: 1fr;
+		}
+	}
+}
+
+.design-style {
+	letter-spacing: -0.01em;
+	&_cta {
+		position: relative;
+		border-radius: rem(26);
+		overflow: hidden;
+		padding: rem(25) rem(30) rem(25) rem(35);
+		@media (min-width: $pc) {
+			min-height: rem(214);
+		}
+		@media (min-width: $tablet) {
+			margin-bottom: rem(37);
+		}
+		@media (min-width: $mobileSmall) {
+			display: flex;
+			align-items: flex-end;
+			grid-column: span 2;
+		}
+		@media (max-width: $tablet) {
+			margin-bottom: 0;
+			padding: rem(20) rem(25);
+			min-height: rem(214);
+		}
+		@media (max-width: $mobileSmall) {
+			min-height: auto;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(#000, 0.4);
+		}
+	}
+	&__body {
+		flex: auto;
+		position: relative;
+		z-index: 2;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: rem(30);
+		@media (max-width: $mobile) {
+			gap: rem(20);
+			flex-direction: column;
+		}
+	}
+	&__image {
+		border-radius: rem(26);
+		aspect-ratio: 310/214;
+		position: relative;
+		overflow: hidden;
+		@media (max-width: $tablet) {
+			border-radius: rem(20);
+		}
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+		}
+	}
+	&__label {
+		text-align: center;
+		font-size: rem(17);
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__descr {
+		font-weight: 500;
+		font-size: rem(19);
+		line-height: 1.25;
+		color: #fff;
+		@media (min-width: $tablet) {
+			max-width: rem(255);
+		}
+		@media (max-width: $tablet) {
+			font-size: rem(18);
+		}
+		@media (max-width: $mobile) {
+			align-self: stretch;
+		}
+	}
+	&__btn {
+		gap: rem(10);
+		padding: rem(14) rem(14) rem(14) rem(30);
+		font-size: rem(17);
+		border-radius: rem(22);
+		white-space: nowrap;
+		@media (max-width: $mobile) {
+			padding: rem(10) rem(10) rem(10) rem(24);
+			border-radius: rem(18);
+			font-size: rem(16);
+		}
+		span {
+			&:last-child {
+				flex: 0 0 rem(46);
+				width: rem(46);
+				aspect-ratio: 1;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: rem(14);
+				background: #000;
+				color: #fff;
+				@media (max-width: $mobile) {
+					flex: 0 0 rem(38);
+					width: rem(38);
+					border-radius: rem(12);
+				}
+				svg {
+					path {
+						stroke: #ffda55;
+					}
+				}
+			}
+		}
+	}
+}

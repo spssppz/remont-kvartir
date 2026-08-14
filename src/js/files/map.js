@@ -6,6 +6,9 @@ function initMap() {
 		let map = new ymaps.Map('footer-map', {
 			center: coordsLocationMain,
 			zoom: 9,
+			controls: [],
+		}, {
+			suppressMapOpenBlock: true, // убирает плашку «Открыть в Яндекс.Картах»
 		})
 
 		let placemark = new ymaps.Placemark(coordsLocationMain, {}, {

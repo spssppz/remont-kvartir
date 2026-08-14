@@ -80,6 +80,10 @@ body {
 // Подключение стилей отдельных страниц
 @import "home"; // Главная
 //
+@import "about";
+@import "design-example";
+@import "article";
+@import "news-item";
 @import "services";
 @import "team";
 @import "reviews";
@@ -145,6 +149,9 @@ body {
 						&:hover {
 							color: #cb1f25;
 						}
+					}
+					&.ready-page {
+						color: rgb(92, 211, 92);
 					}
 				}
 				&:not(:last-child) {

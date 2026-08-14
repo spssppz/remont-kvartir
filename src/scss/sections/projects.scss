@@ -9,6 +9,9 @@
 	&__container {
 	}
 	&__title {
+		text-align: center;
+		max-width: rem(810);
+		margin: 0 auto;
 		&:not(:last-child) {
 			margin-bottom: rem(15);
 			@media (max-width: $tablet) {

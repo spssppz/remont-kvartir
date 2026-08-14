@@ -1,0 +1,168 @@
+.post {
+	padding: rem(40) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(30) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(20) rem(0) rem(30);
+	}
+	&__container {
+	}
+	&__content {
+		letter-spacing: -0.01em;
+		font-size: rem(18);
+		@media (max-width: $tablet) {
+			font-size: rem(17);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(16);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(80);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(60);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(40);
+			}
+		}
+		span {
+			font-weight: 600;
+		}
+		p {
+			line-height: 1.4;
+			&:not(:last-child) {
+				margin-bottom: 1em;
+			}
+		}
+		h1 {
+			font-size: rem(52);
+			line-height: 1.05;
+			@media (max-width: $tablet) {
+				font-size: rem(48);
+			}
+			@media (max-width: $mobile) {
+				font-size: rem(44);
+			}
+			@media (max-width: $mobileSmall) {
+				font-size: rem(38);
+			}
+			&:not(:last-child) {
+				margin-bottom: rem(15);
+			}
+		}
+		h2 {
+			font-size: rem(30);
+			line-height: 1.15;
+			@media (max-width: $tablet) {
+				font-size: rem(28);
+			}
+			@media (max-width: $mobile) {
+				font-size: rem(26);
+			}
+			@media (max-width: $mobileSmall) {
+				font-size: rem(24);
+			}
+			&:not(:last-child) {
+				margin-bottom: rem(20);
+				@media (max-width: $mobile) {
+					margin-bottom: rem(15);
+				}
+			}
+		}
+		h3 {
+			font-size: rem(19);
+			line-height: 1.35;
+			@media (max-width: $tablet) {
+				font-size: rem(18);
+			}
+			&:not(:last-child) {
+				margin-bottom: rem(30);
+				@media (max-width: $tablet) {
+					margin-bottom: rem(25);
+				}
+				@media (max-width: $mobile) {
+					margin-bottom: rem(20);
+				}
+			}
+		}
+		img {
+			border-radius: rem(20);
+			width: 100%;
+			height: auto;
+
+			&:not(:last-child) {
+				margin-bottom: rem(35);
+				@media (max-width: $tablet) {
+					margin-bottom: rem(30);
+				}
+				@media (max-width: $mobile) {
+					margin-bottom: rem(20);
+				}
+			}
+		}
+		ul {
+			li {
+				line-height: 1.2;
+				position: relative;
+				padding-left: rem(17);
+				&::before {
+					content: "";
+					position: absolute;
+					top: rem(9);
+					left: 0;
+					width: rem(3);
+					height: rem(3);
+					border-radius: 50%;
+					background: #ffda55;
+					@media (max-width: $tablet) {
+						top: rem(8);
+					}
+				}
+				&:not(:last-child) {
+					margin-bottom: rem(9);
+				}
+			}
+			&:not(:last-child) {
+				margin-bottom: rem(25);
+				@media (max-width: $tablet) {
+					margin-bottom: rem(20);
+				}
+			}
+		}
+		blockquote {
+			background: #f9f9f9;
+			border-radius: rem(26);
+			padding: rem(30) rem(30) rem(30) rem(95);
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				top: rem(30);
+				left: rem(30);
+				width: rem(35);
+				aspect-ratio: 35/29;
+				background: url("@img/icons/review-decor.svg") 50% / 100% no-repeat;
+				@media (max-width: $tablet) {
+					top: rem(20);
+					left: rem(20);
+				}
+			}
+			@media (max-width: $tablet) {
+				border-radius: rem(20);
+				padding: rem(20) rem(20) rem(20) rem(80);
+			}
+			footer {
+				font-weight: 500;
+			}
+			&:not(:last-child) {
+				margin-bottom: rem(20);
+			}
+		}
+	}
+	&__time {
+		font-size: rem(15);
+		letter-spacing: -0.01em;
+		color: #777889;
+	}
+}

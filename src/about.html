@@ -10,19 +10,377 @@
 	<div class="wrapper">
 		@@include('html/header.html')
 		<main class="page">
-			<nav class="breadcrumbs">
-				<ul>
-					<li><a href="">Главная</a></li>
-					<li>О компании</li>
-				</ul>
-			</nav>
-			<!--  -->
-			<!--  -->
+			<section class="about">
+				<div class="about__container">
+					<nav class="breadcrumbs">
+						<ul>
+							<li><a href="">Главная</a></li>
+							<li>О компании</li>
+						</ul>
+					</nav>
+					<h1 class="page-title">О компании «Ремонт квартир»</h1>
+					<div class="about__text">
+						<p>Мы не просто делаем ремонт. Мы превращаем строительный хаос в прозрачный, управляемый процесс с предсказуемым результатом. Для нас ремонт квартиры — это не набор задач «оштукатурить, положить плитку, поклеить обои», а сложный инженерный и дизайнерский проект, где важна каждая деталь.
+						</p>
+						<p>Наша задача — убрать главную боль клиента: страх неизвестности. Вы будете точно знать, сколько стоит ваш ремонт сегодня, когда он закончится и как будет выглядеть финальный результат. Никаких «а давайте посчитаем по ходу работ» и сюрпризов в виде удорожания в три или в четыре раза.
+						</p>
+					</div>
+					<div class="about__images">
+						<div class="about__image">
+							<img srcset="@img/about-main/1@2x.png 2x" src="@img/about-main/1.png" width="48" height="48" loading="lazy" alt="">
+						</div>
+						<div class="about__image">
+							<img srcset="@img/about-main/2@2x.png 2x" src="@img/about-main/2.png" width="48" height="48" loading="lazy" alt="">
+						</div>
+						<div class="about__image">
+							<img srcset="@img/about-main/3@2x.png 2x" src="@img/about-main/3.png" width="48" height="48" loading="lazy" alt="">
+						</div>
+						<div class="about__image">
+							<img srcset="@img/about-main/4@2x.png 2x" src="@img/about-main/4.png" width="48" height="48" loading="lazy" alt="">
+						</div>
+						<div class="about__image">
+							<img srcset="@img/about-main/5@2x.png 2x" src="@img/about-main/5.png" width="48" height="48" loading="lazy" alt="">
+						</div>
+					</div>
+					<h2 class="about__title">Чем мы занимаемся на самом деле?</h2>
+					<div class="about__text">
+						<p>Мы проектируем и собираем предсказуемый и комфортный интерьер. Слово «собираем» здесь ключевое. Как из конструктора LEGO, мы собираем вашу будущую квартиру из тысяч элементов: от уровня стяжки до расположения каждой розетки, от типа краски на стенах до гарантийного обслуживания.</p>
+					</div>
+					<h3 class="about__label">Вот 4 принципа, на которых построена наша работа:</h3>
+					<ul class="about__items">
+						<li class="about-item">
+							<h3 class="about-item__cap">Фиксированная смета (Hard Budget)</h3>
+							<div class="about-item__text">
+								<p>Стоимость ремонта, которую вы видите в договоре, не меняется.</p>
+								<p>Даже если мы обнаружим кривые стены или старые трубы, о которых не знали изначально. Мы берем на себя все риски. Для нас это вопрос профессиональной этики.</p>
+							</div>
+						</li>
+						<li class="about-item">
+							<h3 class="about-item__cap">Срок — это тоже ресурс</h3>
+							<div class="about-item__text">
+								<p>Мы работаем по принципу «время-деньги» и ценим ваше. Если мы не сдаем объект в оговоренный срок, мы платим неустойку (0,1% от стоимости работ за каждый день просрочки).</p>
+								<p>Это не просто обещание, а пункт договора. Начинаем ремонт через 3 дня после замера.</p>
+							</div>
+						</li>
+						<li class="about-item">
+							<h3 class="about-item__cap">Инженерная точность, а не магия</h3>
+							<div class="about-item__text">
+								<ul>
+									<li>3-уровневая система контроля качества: прораб → начальник участка → внутренняя служба контроля</li>
+									<li>Мастера — граждане РФ и РБ с опытом от 5 лет и аттестацией</li>
+									<li>Гарантия 48 месяцев на все виды работ, прописанная в договоре</li>
+								</ul>
+							</div>
+						</li>
+						<li class="about-item">
+							<h3 class="about-item__cap">Экономия на закупках, а не на качестве</h3>
+							<div class="about-item__text">
+								<p>Мы не экономим, подсовывая дешевые материалы. Мы экономим ваш бюджет за счет скидок от проверенных поставщиков (до 35%).</p>
+								<p>Сами закупаем, привозим и отвечаем за брак. Вы не тратите нервы и время на стройрынках.</p>
+							</div>
+						</li>
+					</ul>
+					<h3 class="about__label">Результат нашей работы для вас:</h3>
+					<ul class="about__advantages">
+						<li class="about-advantage">
+							<div class="about-advantage__icon">
+								<img src="@img/about/1.svg" loading="lazy" alt="">
+							</div>
+							<h4 class="about-advantage__label">Прозрачность</h4>
+							<div class="about-advantage__descr">
+								<p>Вы платите поэтапно, только после подписания акта выполненных работ</p>
+							</div>
+						</li>
+						<li class="about-advantage">
+							<div class="about-advantage__icon">
+								<img src="@img/about/2.svg" loading="lazy" alt="">
+							</div>
+							<h4 class="about-advantage__label">Безопасность</h4>
+							<div class="about-advantage__descr">
+								<p>Наша деятельность застрахована. Это значит, что вы не останетесь один на один с проблемой, если случится форс-мажор (залив соседей, пожар)</p>
+							</div>
+						</li>
+						<li class="about-advantage">
+							<div class="about-advantage__icon">
+								<img src="@img/about/3.svg" loading="lazy" alt="">
+							</div>
+							<h4 class="about-advantage__label">Свободное время</h4>
+							<div class="about-advantage__descr">
+								<p>Мы берем на себя 100% вопросов — от выезда замерщика до финальной уборки</p>
+							</div>
+						</li>
+						<li class="about-advantage">
+							<div class="about-advantage__icon">
+								<img src="@img/about/4.svg" loading="lazy" alt="">
+							</div>
+							<h4 class="about-advantage__label">Квартира мечты под ключ</h4>
+							<div class="about-advantage__descr">
+								<p>Это не просто отремонтированное, а продуманное до мелочей пространство, где приятно жить</p>
+							</div>
+						</li>
+					</ul>
+					<div class="about__bottom">
+						<div class="about__logo">
+							<img src="@img/logo.svg" width="24" height="24" loading="lazy" alt="">
+						</div>
+						<div class="about__bottom-text">
+							<p><span>Коротко о главном:</span> компания «ремонт квартир» — это для тех, кто хочет получить идеальный ремонт без головной боли, с гарантией и фиксированной ценой. Мы отвечаем за слова делом</p>
+						</div>
+					</div>
+					<div class="about__video video" data-video="files/free.mp4">
+						<div class="video__preview">
+							<img srcset="@img/about/video-preview@2x.jpg 2x" src="@img/about/video-preview.jpg" width="1300" height="595" loading="lazy" alt="">
+						</div>
+						<button class="video__play" type="button" aria-label="Запустить видео"></button>
+					</div>
+				</div>
+			</section>
 			@@include('html/sections/why-we.html')
 			@@include('html/sections/workers.html')
-			<!--  -->
-			<!--  -->
-			@@include('html/sections/get-estimate.html')
+			@@include('html/sections/about/resources.html')
+			<section class="reviews">
+				<div class="reviews__wrapper">
+					<div class="reviews__container">
+						<h1 class="reviews__title page-title">Отзывы</h1>
+						<ul class="reviews__top">
+							<li class="reviews-col">
+								<div class="reviews-col__logo">
+									<img src="@img/reviews/yandex.svg" width="100" height="26" alt="">
+								</div>
+								<div class="reviews-col__right">
+									<div class="reviews-col__rating rating" data-rating="4">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input class="rating__item" type="radio" value="1" name="rating">
+												<input class="rating__item" type="radio" value="2" name="rating">
+												<input class="rating__item" type="radio" value="3" name="rating">
+												<input class="rating__item" type="radio" value="4" name="rating">
+												<input class="rating__item" type="radio" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">4.9</div>
+									</div>
+									<div class="reviews-col__count">156 оценок</div>
+								</div>
+							</li>
+							<li class="reviews-col">
+								<div class="reviews-col__logo">
+									<img src="@img/reviews/google.svg" width="92" height="31" alt="">
+								</div>
+								<div class="reviews-col__right">
+									<div class="reviews-col__rating rating" data-rating="4">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input class="rating__item" type="radio" value="1" name="rating">
+												<input class="rating__item" type="radio" value="2" name="rating">
+												<input class="rating__item" type="radio" value="3" name="rating">
+												<input class="rating__item" type="radio" value="4" name="rating">
+												<input class="rating__item" type="radio" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">4.9</div>
+									</div>
+									<div class="reviews-col__count">156 оценок</div>
+								</div>
+							</li>
+							<li class="reviews-col">
+								<div class="reviews-col__logo">
+									<img src="@img/reviews/yell.svg" width="93" height="29" alt="">
+								</div>
+								<div class="reviews-col__right">
+									<div class="reviews-col__rating rating" data-rating="4">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input class="rating__item" type="radio" value="1" name="rating">
+												<input class="rating__item" type="radio" value="2" name="rating">
+												<input class="rating__item" type="radio" value="3" name="rating">
+												<input class="rating__item" type="radio" value="4" name="rating">
+												<input class="rating__item" type="radio" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">4.9</div>
+									</div>
+									<div class="reviews-col__count">156 оценок</div>
+								</div>
+							</li>
+						</ul>
+						<ul class="reviews__items">
+							<li class="review">
+								<div class="review__rating rating" data-rating="3.6">
+									<div class="rating__body">
+										<div class="rating__active"></div>
+										<div class="rating__items">
+											<input class="rating__item" type="radio" value="1" name="rating">
+											<input class="rating__item" type="radio" value="2" name="rating">
+											<input class="rating__item" type="radio" value="3" name="rating">
+											<input class="rating__item" type="radio" value="4" name="rating">
+											<input class="rating__item" type="radio" value="5" name="rating">
+										</div>
+									</div>
+									<div class="rating__value">3.6</div>
+								</div>
+								<div class="review__text">
+									<p>Обращался в эту компанию после покупки новой четырехкомнатной квартиры с чистовой работой. Заказывал современный ремонт однокомнатной квартиры под ключ бизнес класса с материалами и дизайн проектом. Замеры в тот же день. Оперативно приезжали, составили смету и заключили договор,
+										где прописан каждый этап. Понравилось все, начиная от предложения нескольких проектов пространства комнат в квартире до полной уборки в доме. Расценки в договоре строго зафиксированы. Материалы закупают сами, согласовывают каждый шаг. Вывоз строительного мусора бесплатно.
+										Ремонтировали профессионально без шума и пыли, рекомендую с уверенностью. Нашел их в рейтинге и не пожалел, квалифицированные ребята никаких проблем с ними не было.</p>
+								</div>
+								<div class="review__bottom">
+									<div class="review__icon">
+										<img srcset="@img/reviews/01@2x.png 2x" src="@img/reviews/01.png" width="64" height="64" alt="">
+									</div>
+									<div class="review__right">
+										<div class="review__name">Кирилл С.</div>
+										<time class="review__date" datetime="22-02-2026">22.02.2026</time>
+									</div>
+								</div>
+							</li>
+							<li class="review">
+								<div class="review__rating rating" data-rating="3.6">
+									<div class="rating__body">
+										<div class="rating__active"></div>
+										<div class="rating__items">
+											<input class="rating__item" type="radio" value="1" name="rating">
+											<input class="rating__item" type="radio" value="2" name="rating">
+											<input class="rating__item" type="radio" value="3" name="rating">
+											<input class="rating__item" type="radio" value="4" name="rating">
+											<input class="rating__item" type="radio" value="5" name="rating">
+										</div>
+									</div>
+									<div class="rating__value">3.6</div>
+								</div>
+								<div class="review__text">
+									<p>Требовался ремонт 3-комнатной квартиры, точнее моей комнаты с нуля и за помощью я обратилась в СС. Специалисты квалифицированные, рассчитали метраж, сразу после осмотра составили договор на ремонт. Как и обещали всю работу сдали без задержек. Нам хотелось быстрее увидеть
+										изменения. Всё сделали добротно, без всяких косяков. Смело советую, здесь работают профессионалы своего дела.</p>
+								</div>
+								<div class="review__bottom">
+									<div class="review__icon">
+										<img srcset="@img/reviews/02@2x.png 2x" src="@img/reviews/02.png" width="64" height="64" alt="">
+									</div>
+									<div class="review__right">
+										<div class="review__name">Оксана Семеновна М.</div>
+										<time class="review__date" datetime="22-02-2026">22.02.2026</time>
+									</div>
+								</div>
+							</li>
+							<li class="review">
+								<div class="review__rating rating" data-rating="3.6">
+									<div class="rating__body">
+										<div class="rating__active"></div>
+										<div class="rating__items">
+											<input class="rating__item" type="radio" value="1" name="rating">
+											<input class="rating__item" type="radio" value="2" name="rating">
+											<input class="rating__item" type="radio" value="3" name="rating">
+											<input class="rating__item" type="radio" value="4" name="rating">
+											<input class="rating__item" type="radio" value="5" name="rating">
+										</div>
+									</div>
+									<div class="rating__value">3.6</div>
+								</div>
+								<div class="review__text">
+									<p>Обращался в эту компанию после покупки новой четырехкомнатной квартиры с чистовой работой. Заказывал современный ремонт однокомнатной квартиры под ключ бизнес класса с материалами и дизайн проектом. Замеры в тот же день. Оперативно приезжали, составили смету и заключили договор,
+										где прописан каждый этап. Понравилось все, начиная от предложения нескольких проектов пространства комнат в квартире до полной уборки в доме. Расценки в договоре строго зафиксированы. </p>
+								</div>
+								<div class="review__bottom">
+									<div class="review__icon">
+										<img srcset="@img/reviews/03@2x.png 2x" src="@img/reviews/03.png" width="64" height="64" alt="">
+									</div>
+									<div class="review__right">
+										<div class="review__name">Оксана Семеновна М.</div>
+										<time class="review__date" datetime="22-02-2026">22.02.2026</time>
+									</div>
+								</div>
+							</li>
+							<li class="review">
+								<div class="review__rating rating" data-rating="3.6">
+									<div class="rating__body">
+										<div class="rating__active"></div>
+										<div class="rating__items">
+											<input class="rating__item" type="radio" value="1" name="rating">
+											<input class="rating__item" type="radio" value="2" name="rating">
+											<input class="rating__item" type="radio" value="3" name="rating">
+											<input class="rating__item" type="radio" value="4" name="rating">
+											<input class="rating__item" type="radio" value="5" name="rating">
+										</div>
+									</div>
+									<div class="rating__value">3.6</div>
+								</div>
+								<div class="review__text">
+									<p>Требовался ремонт 3-комнатной квартиры, точнее моей комнаты с нуля и за помощью я обратилась в СС. Специалисты квалифицированные, рассчитали метраж, сразу после осмотра составили договор на ремонт. Как и обещали всю работу сдали без задержек. </p>
+								</div>
+								<div class="review__bottom">
+									<div class="review__icon">
+										<img srcset="@img/reviews/04@2x.png 2x" src="@img/reviews/04.png" width="64" height="64" alt="">
+									</div>
+									<div class="review__right">
+										<div class="review__name">Алена Алексеевна</div>
+										<time class="review__date" datetime="22-02-2026">22.02.2026</time>
+									</div>
+								</div>
+							</li>
+							<li class="review">
+								<div class="review__rating rating" data-rating="3.6">
+									<div class="rating__body">
+										<div class="rating__active"></div>
+										<div class="rating__items">
+											<input class="rating__item" type="radio" value="1" name="rating">
+											<input class="rating__item" type="radio" value="2" name="rating">
+											<input class="rating__item" type="radio" value="3" name="rating">
+											<input class="rating__item" type="radio" value="4" name="rating">
+											<input class="rating__item" type="radio" value="5" name="rating">
+										</div>
+									</div>
+									<div class="rating__value">3.6</div>
+								</div>
+								<div class="review__text">
+									<p>Обращался в эту компанию после покупки новой четырехкомнатной квартиры с чистовой работой. Заказывал современный ремонт однокомнатной квартиры под ключ бизнес класса с материалами и дизайн проектом. Замеры в тот же день. Оперативно приезжали, составили смету и заключили договор,
+										где прописан каждый этап. Понравилось все, начиная от предложения нескольких проектов пространства комнат в квартире до полной уборки в доме. Расценки в договоре строго зафиксированы. </p>
+								</div>
+								<div class="review__bottom">
+									<div class="review__icon">
+										<img srcset="@img/reviews/05@2x.png 2x" src="@img/reviews/05.png" width="64" height="64" alt="">
+									</div>
+									<div class="review__right">
+										<div class="review__name">Андрей Александрович</div>
+										<time class="review__date" datetime="22-02-2026">22.02.2026</time>
+									</div>
+								</div>
+							</li>
+							<li class="review">
+								<div class="review__rating rating" data-rating="3.6">
+									<div class="rating__body">
+										<div class="rating__active"></div>
+										<div class="rating__items">
+											<input class="rating__item" type="radio" value="1" name="rating">
+											<input class="rating__item" type="radio" value="2" name="rating">
+											<input class="rating__item" type="radio" value="3" name="rating">
+											<input class="rating__item" type="radio" value="4" name="rating">
+											<input class="rating__item" type="radio" value="5" name="rating">
+										</div>
+									</div>
+									<div class="rating__value">3.6</div>
+								</div>
+								<div class="review__text">
+									<p>Обращался в эту компанию после покупки новой четырехкомнатной квартиры с чистовой работой. Заказывал современный ремонт однокомнатной квартиры под ключ бизнес класса с материалами и дизайн проектом. Замеры в тот же день. Оперативно приезжали, составили смету и заключили договор,
+										где прописан каждый этап. Понравилось все, начиная от предложения нескольких проектов пространства комнат в квартире до полной уборки в доме. Расценки в договоре строго зафиксированы. Материалы закупают сами, согласовывают каждый шаг. </p>
+								</div>
+								<div class="review__bottom">
+									<div class="review__icon">
+										<img srcset="@img/reviews/06@2x.png 2x" src="@img/reviews/06.png" width="64" height="64" alt="">
+									</div>
+									<div class="review__right">
+										<div class="review__name">Егор М.</div>
+										<time class="review__date" datetime="22-02-2026">22.02.2026</time>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			@@include('html/sections/calculator.html')
 		</main>
 		@@include('html/footer.html')
 	</div>

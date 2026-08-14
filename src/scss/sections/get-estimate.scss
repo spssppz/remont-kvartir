@@ -16,8 +16,6 @@
 		@media (min-width: $tablet) {
 			min-height: rem(660);
 		}
-		// Ниже планшета высоту задаёт контент, поэтому появляются
-		// вертикальные паддинги вместо padding-top у контента и отступа у формы
 		@media (max-width: $tablet) {
 			padding: rem(40) rem(20);
 			border-radius: rem(20);
@@ -64,18 +62,34 @@
 			align-items: stretch;
 			gap: rem(25);
 		}
+		.get-estimate_design & {
+			@media (max-width: $tablet) {
+				flex-direction: column;
+				align-items: stretch;
+				gap: rem(25);
+			}
+		}
 	}
 	&__content {
 		color: #fff;
 		flex: 0 0 percent(410, 1300);
 		padding-top: rem(70);
 		@media (max-width: $pc) {
-			flex: 1 1 100%;
+			flex: 0 0 100%;
 			padding-top: rem(50);
 		}
 		@media (max-width: $tablet) {
-			flex: 1 1 auto;
+			flex: 0 0 auto;
 			padding-top: rem(0);
+		}
+		.get-estimate_design & {
+			flex: 0 0 percent(472, 1300);
+			@media (max-width: $pc) {
+				flex: 0 0 100%;
+			}
+			@media (max-width: $tablet) {
+				flex: 0 0 auto;
+			}
 		}
 	}
 	&__title {
@@ -110,6 +124,9 @@
 		@media (max-width: $mobile) {
 			width: rem(200);
 		}
+		.get-estimate_design & {
+			transform: rotate(-15deg);
+		}
 		img {
 			width: 100%;
 			height: auto;
@@ -143,6 +160,10 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		.get-estimate_design & {
+			right: auto;
+			left: percent(-40, 503);
+		}
 		span {
 			font-size: rem(16);
 			letter-spacing: -0.01em;
