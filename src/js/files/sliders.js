@@ -48,6 +48,19 @@ function initSliders() {
 		}
 
 	})
+	if (document.querySelector('.design__slider')) {
+		new Swiper('.design__slider', {
+			modules: [Navigation],
+			slidesPerView: 'auto',
+			spaceBetween: 0,
+			speed: 800,
+			navigation: {
+				prevEl: '.design-nav__btn_prev',
+				nextEl: '.design-nav__btn_next',
+			},
+
+		})
+	}
 	if (document.querySelector('.partners__slider') && window.innerWidth < 992) {
 		new Swiper('.partners__slider', {
 			slidesPerView: 'auto',

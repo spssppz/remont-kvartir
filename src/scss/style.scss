@@ -79,7 +79,9 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "home"; // Главная
-//
+@import "design";
+@import "service";
+@import "project";
 @import "about";
 @import "design-example";
 @import "article";

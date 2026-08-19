@@ -1,0 +1,242 @@
+.we-work {
+	letter-spacing: -0.01em;
+
+	padding: rem(30) rem(0) rem(50);
+	@media (max-width: $tablet) {
+		padding: rem(20) rem(0) rem(40);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(20) rem(0) rem(25);
+	}
+	&__container {
+	}
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: rem(25);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(25);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(20);
+			}
+		}
+	}
+	&__subtitle {
+		max-width: rem(1040);
+		margin: 0 auto;
+		text-align: center;
+		font-size: rem(18);
+		line-height: 1.4;
+		@media (max-width: $tablet) {
+			font-size: rem(17);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(16);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(40);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(30);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(24);
+			}
+		}
+	}
+	&__cols {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: rem(34) rem(20);
+		counter-reset: num;
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr 1fr;
+			gap: rem(20);
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+			gap: rem(15);
+		}
+	}
+}
+.work-top {
+	&:not(:last-child) {
+		margin-bottom: rem(90);
+		@media (max-width: $tablet) {
+			margin-bottom: rem(60);
+		}
+		@media (max-width: $mobile) {
+			margin-bottom: rem(35);
+		}
+	}
+	&__cols {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		align-items: center;
+		gap: rem(45);
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr;
+			gap: rem(25);
+		}
+	}
+	&__image {
+		border-radius: rem(26);
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__text {
+		font-size: rem(18);
+		line-height: 1.45;
+		@media (max-width: $tablet) {
+			font-size: rem(17);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(16);
+		}
+		p {
+			&:not(:last-child) {
+				margin-bottom: 1em;
+			}
+		}
+	}
+}
+
+.we-work-col {
+	border: rem(1) solid #f3f2f2;
+	border-radius: rem(26);
+	padding: rem(29);
+	counter-increment: num;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	@media (max-width: $tablet) {
+		padding: rem(22);
+		border-radius: rem(20);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(18);
+	}
+	&::before {
+		content: "0" counter(num);
+		background: #ffda55;
+		border-radius: rem(14);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-width: rem(42);
+		min-height: rem(42);
+		font-weight: 500;
+		font-size: rem(15);
+		line-height: 1.2;
+		margin-bottom: rem(20);
+		@media (max-width: $mobile) {
+			min-width: rem(36);
+			min-height: rem(36);
+			margin-bottom: rem(15);
+		}
+	}
+	&__cap {
+		font-weight: 500;
+		line-height: 1.25;
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+		}
+	}
+	&__descr {
+		font-size: rem(17);
+		line-height: 1.4;
+		@media (max-width: $mobile) {
+			font-size: rem(16);
+		}
+	}
+}
+.work-quote {
+	grid-column: span 2;
+	border-radius: rem(26);
+	position: relative;
+	padding: rem(31) rem(50);
+	display: flex;
+	flex-direction: column;
+	gap: rem(30);
+	@media (max-width: $tablet) {
+		padding: rem(24) rem(28);
+		gap: rem(20);
+		border-radius: rem(20);
+	}
+	@media (max-width: $mobile) {
+		grid-column: span 1;
+		padding: rem(20);
+	}
+	&::before {
+		content: "";
+		width: rem(35);
+		aspect-ratio: 35/29;
+		background: url("@img/icons/quote-decor.svg") 50% / 100% no-repeat;
+		position: relative;
+		z-index: 2;
+	}
+	&__bg {
+		border-radius: rem(26);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		@media (max-width: $tablet) {
+			border-radius: rem(20);
+		}
+	}
+	&__text {
+		position: relative;
+		font-size: rem(18);
+		line-height: 1.4;
+		color: #fff;
+		max-width: percent(394, 752);
+		@media (max-width: $tablet) {
+			max-width: 100%;
+			font-size: rem(17);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(16);
+		}
+	}
+	&__decor {
+		position: absolute;
+		bottom: 0;
+		right: percent(130, 852);
+		width: rem(261);
+		@media (max-width: $tablet) {
+			display: none;
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__decor-descr {
+		position: absolute;
+		right: percent(-86, 261);
+		bottom: percent(18, 237);
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		span {
+			font-size: rem(13);
+			letter-spacing: -0.01em;
+			padding: rem(7) rem(10);
+			border-radius: rem(10);
+			&:first-child {
+				background: #363636;
+				color: #fff;
+				font-weight: 600;
+			}
+			&:last-child {
+				background: #ffda55;
+				font-size: rem(12);
+			}
+		}
+	}
+}

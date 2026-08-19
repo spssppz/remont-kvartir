@@ -1,0 +1,77 @@
+.apartment-types {
+	padding: rem(50) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(40) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(25) rem(0);
+	}
+	&__container {
+	}
+	&__title {
+	}
+	&__items {
+	}
+}
+
+.apartment-type {
+	padding: rem(20) rem(50);
+	border: rem(1) solid #f3f2f2;
+	border-radius: rem(26);
+	display: flex;
+	gap: percent(65, 1200);
+	letter-spacing: -0.01em;
+	@media (max-width: $tablet) {
+		padding: rem(20) rem(30);
+		gap: rem(24);
+	}
+	@media (max-width: $mobile) {
+		flex-direction: column;
+		padding: rem(20);
+		border-radius: rem(20);
+		gap: rem(16);
+	}
+	&:not(:last-child) {
+		margin-bottom: rem(15);
+		@media (max-width: $mobile) {
+			margin-bottom: rem(12);
+		}
+	}
+	&__image {
+		flex: 0 0 rem(212);
+		@media (max-width: $tablet) {
+			flex: 0 0 rem(160);
+		}
+		@media (max-width: $mobile) {
+			flex: 0 0 auto;
+			width: rem(160);
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__right {
+	}
+	&__cap {
+		font-weight: 500;
+		font-size: rem(20);
+		line-height: 1.25;
+		@media (max-width: $mobile) {
+			font-size: rem(18);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(10);
+		}
+	}
+	&__descr {
+		font-size: rem(17);
+		line-height: 1.41176;
+		@media (max-width: $tablet) {
+			font-size: rem(16);
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: rem(15);
+		}
+	}
+}

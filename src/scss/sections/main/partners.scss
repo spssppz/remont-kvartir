@@ -35,6 +35,15 @@
 		@media (max-width: $tablet) {
 			overflow: visible;
 		}
+		&:not(:last-child) {
+			margin-bottom: rem(70);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(50);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(40);
+			}
+		}
 	}
 	&__items {
 		display: grid;
@@ -86,6 +95,77 @@
 		&:not(:last-child) {
 			@media (max-width: $tablet) {
 				margin-right: rem(15);
+			}
+		}
+	}
+	&__image {
+		border-radius: rem(26);
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: auto;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(40);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(30);
+			}
+		}
+	}
+	&__content {
+		letter-spacing: -0.01em;
+	}
+	&__cap {
+		font-weight: 500;
+		font-size: rem(24);
+		line-height: 1.1;
+		@media (max-width: $tablet) {
+			font-size: rem(22);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(20);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+		}
+	}
+	&__text {
+		font-size: rem(18);
+		line-height: 1.4;
+		@media (max-width: $mobile) {
+			font-size: rem(17);
+		}
+		p {
+			&:not(:last-child) {
+				margin-bottom: rem(15);
+			}
+		}
+		ul {
+			li {
+				position: relative;
+				padding-left: rem(17);
+				&::before {
+					content: "";
+					position: absolute;
+					top: rem(11);
+					left: 0;
+					width: rem(3);
+					height: rem(3);
+					border-radius: 50%;
+					background: #ffda55;
+					@media (max-width: $mobile) {
+						top: rem(10);
+					}
+				}
+				&:not(:last-child) {
+					margin-bottom: rem(5);
+				}
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(40);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(30);
 			}
 		}
 	}

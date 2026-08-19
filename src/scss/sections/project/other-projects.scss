@@ -1,0 +1,26 @@
+.other-projects {
+	padding: rem(60) rem(0) rem(50);
+	@media (max-width: $tablet) {
+		padding: rem(40) rem(0) rem(40);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(30) rem(0) rem(25);
+	}
+	&__container {
+	}
+	&__title {
+		text-align: left;
+		max-width: none;
+	}
+	&__items {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: rem(20);
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+		}
+	}
+}

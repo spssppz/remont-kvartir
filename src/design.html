@@ -10,18 +10,104 @@
 	<div class="wrapper">
 		@@include('html/header.html')
 		<main class="page">
-			<!--  -->
-			<!--  -->
-			<!--  -->
-			<!--  -->
-			<!--  -->
-			<!--  -->
-			<!--  -->
+			@@include('html/sections/design/hero.html')
+			@@include('html/sections/design/about.html')
+			@@include('html/sections/design-example/projects.html')
+			@@include('html/sections/design-example/popular.html')
+			<section class="design">
+				<div class="design__container">
+					<h1 class="design__title title">Заголовок длинный в две строки
+						с переносом для блока</h1>
+					<div class="design__row design__row_top">
+						<div class="design__image">
+							<img srcset="@img/design/01@2x.jpg 2x" src="@img/design/01.jpg" width="466" height="444" loading="lazy" alt="">
+						</div>
+						<div class="design__image">
+							<img srcset="@img/design/02@2x.jpg 2x" src="@img/design/02.jpg" width="466" height="444" loading="lazy" alt="">
+						</div>
+						<div class="design__note">
+							<div class="design__note-cap">Важно</div>
+							<div class="design__note-text">
+								<p>Обладая глубокими этническими корнями, это направление по-разному раскрывается в зависимости от географии. Английскому кантри свойственна утонченная чопорность, американскому — брутальный дух классического ранчо</p>
+							</div>
+						</div>
+					</div>
+					<div class="design__text">
+						<p>Обладая глубокими этническими корнями, это направление по-разному раскрывается в зависимости от географии. Английскому кантри свойственна утонченная чопорность, американскому — брутальный дух классического ранчо, а средиземноморскому — легкость залитого солнцем прибрежного дома. При
+							всей разнице культур их объединяет отказ от городской суеты и верность традициям.</p>
+						<p>Дизайнеры воссоздают атмосферу тепла и уюта деревенского дома, соединяя ее с современным комфортом. Кухню, столовую и гостиную часто объединяют в единое, наполненное воздухом пространство. Смысловым и визуальным центром интерьера неизменно становится домашний очаг — традиционная печь
+							или большой камин, вокруг которого выстраивается планировка комнат.</p>
+					</div>
+					<div class="design-quote">
+						<img class="design-quote__bg" srcset="@img/design/quote-bg@2x.jpg 2x" src="@img/design/quote-bg.jpg" width="1300" height="188" loading="lazy" alt="">
+						<div class="design-quote__text">
+							<p>«В нашем портфолио десятки успешно реализованных проектов. Наши мастера несут полную ответственность за качество выполненных работ. Смысловым и визуальным центром интерьера неизменно становится домашний очаг — традиционная печь или большой камин, вокруг которого выстраивается
+								планировка комнат»</p>
+						</div>
+						<div class="design-quote__decor">
+							<img srcset="@img/we-work/quote-man@2x.png 2x" src="@img/we-work/quote-man.png" width="233" height="211" loading="lazy" alt="Михаил">
+							<div class="design-quote__decor-descr">
+								<span>Михаил</span>
+								<span>Прораб «Ремонт квартир»</span>
+							</div>
+						</div>
+					</div>
+					<div class="design__row design__row_media">
+						<div class="design__slider swiper">
+							<ul class="design__wrapper swiper-wrapper">
+								<li class="design__slide swiper-slide">
+									<img srcset="@img/design/03@2x.jpg 2x" src="@img/design/03.jpg" width="837" height="490" loading="lazy" alt="">
+								</li>
+								<li class="design__slide swiper-slide">
+									<img srcset="@img/design/03@2x.jpg 2x" src="@img/design/03.jpg" width="837" height="490" loading="lazy" alt="">
+								</li>
+								<li class="design__slide swiper-slide">
+									<img srcset="@img/design/03@2x.jpg 2x" src="@img/design/03.jpg" width="837" height="490" loading="lazy" alt="">
+								</li>
+							</ul>
+							<div class="design-nav">
+								<button class="design-nav__btn design-nav__btn_prev" aria-label="Предыдущий слайд">
+									<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.40478 1L1 6L6.40478 11M1 6L13 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</button>
+								<button class="design-nav__btn design-nav__btn_next" aria-label="Следующий слайд">
+									<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M7.59522 1L13 6L7.59522 11M13 6L1 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div class="design__content">
+							<h2 class="design__block-title">Пример дизайн-проектов квартир</h2>
+							<div class="design__text">
+								<p>Обладая глубокими этническими корнями, это направление по-разному раскрывается в зависимости от географии.</p>
+								<p>Английскому кантри свойственна утонченная чопорность, американскому — брутальный дух классического ранчо, а средиземноморскому — легкость залитого солнцем прибрежного дома. При всей разнице культур их объединяет отказ от городской суеты и верность традициям.</p>
+							</div>
+						</div>
+					</div>
+					<h2 class="design__block-title">Пример дизайн-проектов квартир</h2>
+					<div class="design__text">
+						<p>Обладая глубокими этническими корнями, это направление по-разному раскрывается в зависимости от географии. Английскому кантри свойственна утонченная чопорность, американскому — брутальный дух классического ранчо, а средиземноморскому — легкость залитого солнцем прибрежного дома. При
+							всей разнице культур их объединяет отказ от городской суеты и верность традициям.</p>
+						<p>Дизайнеры воссоздают атмосферу тепла и уюта деревенского дома, соединяя ее с современным комфортом. Кухню, столовую и гостиную часто объединяют в единое, наполненное воздухом пространство. Смысловым и визуальным центром интерьера неизменно становится домашний очаг — традиционная печь
+							или большой камин, вокруг которого выстраивается планировка комнат.</p>
+					</div>
+					<div class="design__video video" data-video="files/free.mp4">
+						<div class="video__preview">
+							<img srcset="@img/design/video-preview@2x.jpg 2x" src="@img/design/video-preview.jpg" width="1300" height="595" loading="lazy" alt="">
+						</div>
+						<button class="video__play" type="button" aria-label="Запустить видео"></button>
+					</div>
+				</div>
+			</section>
 			@@include('html/sections/advantages.html')
 			@@include('html/sections/get-design.html')
-			<!--  -->
-			<!--  -->
-			<!--  -->
+			@@include('html/sections/design/types.html')
+			@@include('html/sections/design/dev-cost.html')
+			@@include('html/sections/design/supervision.html')
+			@@include('html/sections/design/other-services.html')
+			@@include('html/sections/get-design.html')
 		</main>
 		@@include('html/footer.html')
 	</div>

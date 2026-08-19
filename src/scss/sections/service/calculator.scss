@@ -1,0 +1,126 @@
+.calc-service {
+	padding: rem(0) rem(20) rem(20);
+	@media (max-width: $tablet) {
+		padding: rem(0) rem(10) rem(20);
+	}
+	&__breadcrumbs {
+		color: #fff;
+	}
+	&__content {
+		color: #fff;
+		letter-spacing: -0.01em;
+		&:not(:last-child) {
+			margin-bottom: rem(45);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(35);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(25);
+			}
+		}
+	}
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(20);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(20);
+			}
+		}
+	}
+	&__text {
+		font-size: rem(19);
+		line-height: 1.35;
+		max-width: rem(720);
+		@media (max-width: $mobile) {
+			font-size: rem(18);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(30);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(20);
+			}
+		}
+	}
+	&__cols {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+		gap: rem(60);
+		@media (max-width: $pc) {
+			gap: rem(30) rem(60);
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr 1fr 1fr;
+			gap: rem(30);
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr 1fr;
+			gap: rem(20);
+		}
+		@media (max-width: $mobileSmall) {
+			grid-template-columns: 1fr;
+		}
+	}
+	&__col {
+		display: inline-flex;
+		align-items: flex-start;
+		gap: rem(15);
+		@media (max-width: $mobileSmall) {
+			align-items: center;
+		}
+	}
+	&__col-icon {
+		flex: 0 0 rem(50);
+		width: rem(50);
+		aspect-ratio: 1;
+		border-radius: rem(18);
+		background: #ffda55;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__col-descr {
+		font-size: rem(16);
+		line-height: 1.375;
+		span {
+			font-weight: 600;
+		}
+	}
+	&__wrapper {
+		position: relative;
+		border-radius: rem(40);
+		overflow: hidden;
+		max-width: rem(1920);
+		margin: 0 auto;
+		padding: rem(40) rem(0);
+		@media (max-width: $tablet) {
+			border-radius: rem(20);
+			padding: rem(40) rem(0);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(25) rem(0);
+		}
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__container {
+		position: relative;
+	}
+	&__body {
+		display: flex;
+		gap: rem(15);
+		@media (max-width: $tablet) {
+			width: 100%;
+			flex-direction: column;
+		}
+	}
+}

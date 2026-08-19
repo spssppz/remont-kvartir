@@ -1,0 +1,71 @@
+.project-hero {
+	padding: rem(0) rem(20) rem(20);
+	color: #fff;
+	@media (max-width: $tablet) {
+		padding: rem(0) rem(10) rem(20);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(0) rem(10) rem(20);
+	}
+	&__wrapper {
+		border-radius: rem(40);
+		margin: 0 auto;
+		max-width: rem(1500);
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		padding: rem(40) rem(0) rem(60);
+		@media (min-width: $tablet) {
+			min-height: rem(500);
+		}
+		@media (max-width: $tablet) {
+			border-radius: rem(20);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(30) rem(0);
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(#000, 0.3);
+		}
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: rem(40);
+		@media (max-width: $tablet) {
+			border-radius: rem(20);
+		}
+	}
+	&__container {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex: auto;
+	}
+	&__breadcrumbs {
+	}
+	&__title {
+		max-width: rem(740);
+		&:not(:last-child) {
+			margin-bottom: rem(35);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(30);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(20);
+			}
+		}
+	}
+}

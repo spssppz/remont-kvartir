@@ -1,0 +1,136 @@
+<section class="calc-service">
+	<div class="calc-service__wrapper">
+		<img class="calc-service__bg" srcset="@img/calc/service-bg@2x.jpg 2x" src="@img/calc/service-bg.jpg" width="1500" height="805" loading="lazy" alt="">
+		<div class="calc-service__container">
+			<nav class="calc-service__breadcrumbs breadcrumbs breadcrumbs_w">
+				<ul>
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="services.html">Услуги</a></li>
+					<li>Страница дизайн проекта</li>
+				</ul>
+			</nav>
+			<div class="calc-service__content">
+				<h1 class="calc-service__title page-title">Ремонт квартир в Москве</h1>
+				<div class="calc-service__text">От 2 700 руб./кв.м с гарантией в договоре 4 года. Бесплатный выезд замерщика по Москве в день обращения. Начнем ремонт за 3 дня</div>
+				<ul class="calc-service__cols">
+					<li class="calc-service__col">
+						<div class="calc-service__col-icon">
+							<img src="@img/calc/1.svg" alt="">
+						</div>
+						<div class="calc-service__col-descr">Все специалисты <span>в штате</span></div>
+					</li>
+					<li class="calc-service__col">
+						<div class="calc-service__col-icon">
+							<img src="@img/calc/2.svg" alt="">
+						</div>
+						<div class="calc-service__col-descr"><span>Соблюдаем</span> закон о тишине</div>
+					</li>
+					<li class="calc-service__col">
+						<div class="calc-service__col-icon">
+							<img src="@img/calc/3.svg" alt="">
+						</div>
+						<div class="calc-service__col-descr"><span>100%</span> соблюдение сроков</div>
+					</li>
+					<li class="calc-service__col">
+						<div class="calc-service__col-icon">
+							<img src="@img/calc/4.svg" alt="">
+						</div>
+						<div class="calc-service__col-descr"><span>Единый</span> стандарт качества</div>
+					</li>
+					<li class="calc-service__col">
+						<div class="calc-service__col-icon">
+							<img src="@img/calc/5.svg" alt="">
+						</div>
+						<div class="calc-service__col-descr">Наша деятельность <span>застрахована</span></div>
+					</li>
+					<li class="calc-service__col">
+						<div class="calc-service__col-icon">
+							<img src="@img/calc/6.svg" alt="">
+						</div>
+						<div class="calc-service__col-descr">Состоим в <span>СРО</span></div>
+					</li>
+				</ul>
+			</div>
+			<div class="calc-service__body">
+				<div class="calc-cost">
+					<h2 class="calc-cost__title">Хотите узнать стоимость ремонта?</h2>
+					<ul class="calc-cost__cols">
+						<li class="calc-cost__col">
+							<div class="calc-cost__cap">Количество комнат:</div>
+							<div class="calc-cost__checkbox">
+								<label class="checkbox">
+									<input class="checkbox__input" type="checkbox" name="rooms[]" value="Студия" form="calc-form">
+									<span class="checkbox__text">Студия</span>
+								</label>
+								<label class="checkbox">
+									<input class="checkbox__input" type="checkbox" name="rooms[]" value="1-комнатная" form="calc-form">
+									<span class="checkbox__text">1-комнатная</span>
+								</label>
+								<label class="checkbox">
+									<input class="checkbox__input" type="checkbox" name="rooms[]" value="2-комнатная" form="calc-form">
+									<span class="checkbox__text">2-комнатная</span>
+								</label>
+								<label class="checkbox">
+									<input class="checkbox__input" type="checkbox" name="rooms[]" value="3-комнатная" form="calc-form">
+									<span class="checkbox__text">3-комнатная</span>
+								</label>
+								<label class="checkbox">
+									<input class="checkbox__input" type="checkbox" name="rooms[]" value="4-комнатная" form="calc-form">
+									<span class="checkbox__text">4-комнатная</span>
+								</label>
+							</div>
+						</li>
+						<li class="calc-cost__col">
+							<div class="calc-cost__cap">Укажите тип дома:</div>
+							<div class="calc-cost__checkbox">
+								<label class="checkbox">
+									<input class="checkbox__input" type="checkbox" name="house[]" value="Новостройка" form="calc-form">
+									<span class="checkbox__text">Новостройка</span>
+								</label>
+								<label class="checkbox">
+									<input class="checkbox__input" type="checkbox" name="house[]" value="Вторичка" form="calc-form">
+									<span class="checkbox__text">Вторичка</span>
+								</label>
+							</div>
+						</li>
+						<li class="calc-cost__col">
+							<div class="calc-cost__cap">Вид ремонта:</div>
+							<div class="calc-cost__checkbox">
+								<label class="checkbox">
+									<input class="checkbox__input" type="checkbox" name="repair[]" value="Под ключ" form="calc-form">
+									<span class="checkbox__text">Под ключ</span>
+								</label>
+								<label class="checkbox">
+									<input class="checkbox__input" type="checkbox" name="repair[]" value="Дизайнерский" form="calc-form">
+									<span class="checkbox__text">Дизайнерский</span>
+								</label>
+								<label class="checkbox">
+									<input class="checkbox__input" type="checkbox" name="repair[]" value="Черновой" form="calc-form">
+									<span class="checkbox__text">Черновой</span>
+								</label>
+							</div>
+						</li>
+						<li class="calc-cost__col">
+							<div class="calc-cost__cap">Площадь, кв.м:</div>
+							<input class="calc-cost__input input" type="text" inputmode="numeric" name="area" placeholder="" form="calc-form">
+						</li>
+					</ul>
+				</div>
+				<form class="calc-form" id="calc-form" action="files/mail.php" method="post" data-validate>
+					<input class="form-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+					<input type="hidden" name="form_title" value="Калькулятор стоимости ремонта">
+					<div class="calc-form__title">При заказе <span>дизайн-проект в подарок</span></div>
+					<input class="calc-form__input phone input" type="tel" name="phone" placeholder="+7(___) ___-__-__" required>
+					<button class="calc-form__btn btn" type="submit">Получить точную смету</button>
+					<label class="checkbox">
+						<input class="checkbox__input" type="checkbox" value="Согласен" name="consent" required>
+						<span class="checkbox__text">
+							Соглашаюсь с <a href="privacy-policy.html" target="_blank">обработкой персональных данных</a> и <a href="policy.html" target="_blank">политикой конфиденциальности</a>
+						</span>
+					</label>
+					<div class="form-status" data-form-status></div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>

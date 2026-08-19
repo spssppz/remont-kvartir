@@ -1,0 +1,192 @@
+.design-example-hero {
+	letter-spacing: -0.01em;
+	padding: rem(0) rem(20) rem(20);
+	@media (max-width: $tablet) {
+		padding: rem(0) rem(10) rem(20);
+	}
+	&__wrapper {
+		position: relative;
+		border-radius: rem(40);
+		overflow: hidden;
+		max-width: rem(1920);
+		margin: 0 auto;
+		@media (min-width: $tablet) {
+			min-height: rem(760);
+		}
+		@media (max-width: $tablet) {
+			border-radius: rem(30);
+		}
+		@media (max-width: $mobile) {
+			border-radius: rem(20);
+		}
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__container {
+		position: relative;
+		z-index: 2;
+	}
+	&__body {
+		position: relative;
+		padding: rem(40) rem(0) rem(30);
+		@media (max-width: $tablet) {
+			padding: rem(30) rem(0);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(20) rem(0);
+		}
+	}
+	&__content {
+		&:not(:last-child) {
+			margin-bottom: rem(70);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(50);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(40);
+			}
+		}
+	}
+	&__breadcrumbs {
+		&:not(:last-child) {
+			margin-bottom: rem(40);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(40);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(30);
+			}
+		}
+	}
+	&__title {
+		max-width: rem(600);
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(15);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(15);
+			}
+		}
+	}
+	&__subtitle {
+		font-size: rem(19);
+		line-height: 1.35;
+		@media (max-width: $tablet) {
+			font-size: rem(18);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(30);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(20);
+			}
+		}
+	}
+	&__descr {
+		max-width: rem(544);
+		font-size: rem(17);
+		line-height: 1.41176;
+		@media (max-width: $tablet) {
+			font-size: rem(16);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(15);
+		}
+	}
+	&__notes {
+		border-radius: rem(30);
+		background: #fff;
+		padding: rem(30) rem(40) rem(50);
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: percent(80, 1220);
+		position: relative;
+		z-index: 2;
+		@media (max-width: $tablet) {
+			border-radius: rem(20);
+			grid-template-columns: 1fr;
+			gap: rem(24);
+			padding: rem(24) rem(24) rem(28);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(20);
+		}
+	}
+	&__note {
+	}
+	&__note-title {
+		font-weight: 600;
+		font-size: rem(19);
+		line-height: 1.25;
+		@media (max-width: $tablet) {
+			font-size: rem(18);
+		}
+		&:not(:last-child) {
+			margin-bottom: 1em;
+		}
+	}
+	&__note-text {
+		font-size: rem(16);
+		line-height: 1.375;
+		@media (max-width: $mobile) {
+			font-size: rem(15);
+		}
+		p {
+			&:not(:last-child) {
+				margin-bottom: 1em;
+			}
+		}
+	}
+	&__decor {
+		position: absolute;
+		bottom: 0;
+		right: percent(140, 1300);
+		width: percent(554, 1300);
+		@media (max-width: $pc) {
+			width: percent(740, 1300);
+			right: 0;
+		}
+		@media (max-width: $tablet) {
+			display: none;
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__decor-descr {
+		position: absolute;
+		left: 0;
+		bottom: percent(378, 733);
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		@media (max-width: $pc) {
+			bottom: 60%;
+			left: 30%;
+		}
+		span {
+			font-size: rem(15);
+			line-height: 1.05;
+			padding: rem(10) rem(12);
+			border-radius: rem(12);
+			&:first-child {
+				font-size: rem(16);
+				font-weight: 600;
+				padding: rem(10) rem(16);
+				color: #fff;
+				background: #363636;
+			}
+			&:last-child {
+				background: #ffda55;
+			}
+		}
+	}
+}
